@@ -18,6 +18,10 @@ body {
 
 }
 
+.instructions-container {
+    height: 100vh;
+}
+
 /* LCARS PANELS */
 
 /* /* Panel styling taken from lcars style css theme https://github.com/frohoff/ctfd-trektheme.  */
@@ -45,8 +49,31 @@ body {
 .container-lcars-bottom {
     padding: 15px 30px;
     border-style: solid;
-    border-color: #97A;
+    border-color: #E95;
     border-width: 0px 50px 10px 50px;
     border-bottom-left-radius: 80px;
     border-bottom-right-radius: 80px; 
 }
+
+/* LCARS BUTTONS */
+
+.lcars-btn-orange {
+    display: block;
+    background: orange;
+    border-radius: 50px 50px 50px 50px;
+    box-shadow: none;
+    height: 50px;
+    width: 100px;
+    margin: 0 auto;
+    /* font-weight: lighter; */
+    /* white-space: normal; */
+  }
+  
+  .lcars-btn-orange:hover {
+    opacity: 0.6;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
