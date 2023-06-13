@@ -1,9 +1,52 @@
+@font-face {
+    font-family: "lcars";
+    src: url("/assets/lcars.woff") format("woff");
+  }
+
 body {
     background: black;
-    color: white
+    color: white;
 }
 
 .answer-btn {
-    display: block;
-    margin: 10px auto
+    background: orange;
+    border-radius: 50px 50px 50px 50px;
+    box-shadow: none;
+    font-weight: lighter;
+    white-space: normal;
+    width: 100%;
+
+}
+
+/* LCARS PANELS */
+
+/* /* Panel styling taken from lcars style css theme https://github.com/frohoff/ctfd-trektheme.  */
+
+
+.container-lcars-top { 
+    padding: 15px 30px;
+    border-style: solid;
+    border-color: #97A;
+    border-width: 10px 50px 0px 50px;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+}
+
+.container-lcars-left {
+    border-style: solid;
+    border-color: #FC6;
+    border-width: 7px 0px 7px 40px;
+    border-radius: 60px 0px 0px 60px / 30px !important;
+    margin: 50px 0 50px 0;
+    padding-bottom: 25px;
+    padding-top: 25px !important;
+}
+
+.container-lcars-bottom {
+    padding: 15px 30px;
+    border-style: solid;
+    border-color: #97A;
+    border-width: 0px 50px 10px 50px;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px; 
 }
