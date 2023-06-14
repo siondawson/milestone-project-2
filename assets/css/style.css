@@ -111,11 +111,8 @@ body {
     display: none;
   }
 
-  .question-img {
-    height: 100px;
-    width: 100px;
-    margin: 0 auto;
-    display: block;
-    object-fit: cover;
+  .array-img {
+    height: 150px;
+    display: inherit;
 
   }
