@@ -3,9 +3,16 @@
     src: url("/assets/lcars.woff") format("woff");
   }
 
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
 body {
     background: black;
     color: white;
+    width: 100%;
 }
 
 .answer-btn {
@@ -26,6 +33,12 @@ body {
 
 .instructions-container {
     height: 100vh;
+}
+
+#starfleet-badge {
+    height: 130px;
+    width: 100px;
+    overflow: hidden;
 }
 
 /* LCARS PANELS */
@@ -79,7 +92,7 @@ body {
     border-radius: 50px 50px 50px 50px;
     box-shadow: none;
     height: 50px;
-    width: 100px;
+    width: 80px;
     margin: 0 auto;
     /* font-weight: lighter; */
     /* white-space: normal; */
@@ -92,4 +105,17 @@ body {
   a {
     text-decoration: none;
     color: #000;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .question-img {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+
   }
