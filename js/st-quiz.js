@@ -16,27 +16,37 @@ const easyQuestions = [{
     options: ["Vulcan", "Klingon", "Dalek", "Tribble"],
     correct: "Tribble"
 }
-
-
-
 ];
 
 
 /**
- * Function will fire on page loading. Populate questions and answers. Set score to zero. 
+ * Resets score to 0, populates question image and answers. 
+ * Random color applied from buttonColors array.
+ * Increments question number to 1.
  */
-
 function startQuiz() {
+
     let questionCounter = document.getElementById('question-number');
     let question = document.getElementById('question');
     let image = document.getElementById('question-img');
-
+    
+    let answers = Array.from(document.querySelectorAll(".answer-btn"));
+    
     question.innerHTML = easyQuestions[0].question;
     questionCounter.innerHTML = `Question ${questionNumber}`;
+
     image.classList.remove('hidden');
     image.innerHTML = easyQuestions[0].image;
-    questionNumber++;
 
-    
-}
+    for (let i = 0;i < 4; i++) {
+        answers[i].innerText = easyQuestions[0].options[i];
+    }
+
+    for (let i = 0; i < 4; i++) {
+        let randomColor = Math.floor(Math.random() * buttonColors.length);
+        answers[i].style.background = buttonColors[randomColor];
+    }
+
+    questionNumber++;
+};
 

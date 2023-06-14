@@ -19,7 +19,7 @@ body {
     background: orange;
     border-radius: 50px 50px 50px 50px;
     box-shadow: none;
-    font-weight: lighter;
+    /* font-weight: lighter; */
     white-space: normal;
     height: 50px;
     width: 50%;
