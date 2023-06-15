@@ -123,7 +123,12 @@ function checkAnswer() {
                 console.log("correct");
                 console.log(userAnswer[0]);
                 let correctAnswer = document.querySelector(".user-answer");
-                correctAnswer.classlist.add("turn-green");
+                correctAnswer.classList.add("turn-green");
+                // correctAnswer.classList.remove("answer-btn");
+            } else {
+                console.log("incorrect");
+                let incorrectAnswer = document.querySelector(".user-answer");
+                incorrectAnswer.classList.add("turn-red");
             }
         })
     });

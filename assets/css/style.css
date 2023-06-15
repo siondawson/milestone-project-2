@@ -122,5 +122,9 @@ body {
   }
 
   .turn-green {
-    background-color: green;
+    background: #00ff00 !important;
+  }
+
+  .turn-red {
+    background: #ff0000 !important;
   }
