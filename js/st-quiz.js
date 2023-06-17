@@ -18,7 +18,7 @@ const easyQuestions = [{
 },
 {
     question: '"Bones" is the nickname of which character?',
-    image: ``,
+    image: `<img src="assets/images/st-tos-cast.jpeg">`,
     options: ["Spock", "Captain Picard", "Dr. McCoy", "Dr. Crusher"],
     correct: "Dr. McCoy"
 },
@@ -30,7 +30,7 @@ const easyQuestions = [{
 },
 {
     question: "Who was captain of the Enterprise before Kirk?",
-    image: `<img src="assets/images/kirk-img.jpeg">`,
+    image: `<img src="assets/images/enterprise.jpeg">`,
     options: ["Spock", "Janeway", "Picard", "Pike"],
     correct: "Pike"
 },
@@ -188,6 +188,8 @@ function nextQuestion() {
     let image = document.getElementById('question-img');
     let answers = document.getElementsByClassName("answer-btn");
     let questionCounter = document.getElementById('question-number');
+
+    randomColor();
 
     if (questionNumber < easyQuestions.length) {
         console.log(answers);
