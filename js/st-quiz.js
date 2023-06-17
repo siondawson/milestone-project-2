@@ -69,7 +69,7 @@ window.onload = quizPrimed();
  */
 function quizPrimed() {
     
-    let disabled = document.getElementsByClassName("answer-btn").disabled = true;
+    document.getElementsByClassName("answer-btn").disabled = true;
     console.log("disabled");
 }
 
@@ -127,17 +127,20 @@ function startQuiz() {
  * Calls nextQuestion function.
  */
 function checkAnswer() {
+    console.log(questionNumber);
     let i = questionNumber - 1;
+    console.log(i);
     let answers = Array.from(document.querySelectorAll(".answer-btn"));
     let correct = easyQuestions[i].correct;
+    console.log(correct);
     
     answers.forEach(answer => {
         answer.addEventListener("click", () => {
             answer.classList.add("user-answer");
             let userAnswer = document.getElementsByClassName("user-answer");
+            console.log(userAnswer);
             let result = userAnswer[i].innerHTML;
-            console.log(result);
-            console.log(correct);
+            console.log(userAnswer[i].innerHTML);
 
             if (result === correct) {
                 console.log("correct");
@@ -159,13 +162,11 @@ function checkAnswer() {
 
     let nextButton = document.getElementById("next-question-btn");
     nextButton.classList.remove("hidden");
-
     
 };
 
 function nextQuestion() {
     console.log("Next Question!");
-    let i = questionNumber - 1;
     let question = document.getElementById("question");
     let image = document.getElementById('question-img');
     let answers = document.querySelectorAll(".answer-btn");
@@ -188,7 +189,7 @@ function nextQuestion() {
     }
 
     questionCounter.innerHTML = `Question ${questionNumber + 1}`;
-
+    questionNumber++;
     checkAnswer();
 
 
