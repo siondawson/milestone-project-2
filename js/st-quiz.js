@@ -137,22 +137,20 @@ function checkAnswer() {
     answers.forEach(answer => {
         answer.addEventListener("click", () => {
             answer.classList.add("user-answer");
-            let userAnswer = document.getElementsByClassName("user-answer");
+            let userAnswer = document.getElementsByClassName("user-answer").item(0);
             console.log(userAnswer);
-            let result = userAnswer[i].innerHTML;
-            console.log(userAnswer[i].innerHTML);
+            let result = userAnswer.innerHTML;
+            console.log(result);
+            console.log(correct);
 
             if (result === correct) {
                 console.log("correct");
-                console.log(userAnswer[i]);
-                let correctAnswer = document.querySelector(".user-answer");
-                correctAnswer.classList.add("turn-green");
+                console.log(userAnswer);
+                userAnswer.classList.add("turn-green");
                 score++;
-                
-            } else {
+            } else if (result != correct) {
                 console.log("incorrect");
-                let incorrectAnswer = document.querySelector(".user-answer");
-                incorrectAnswer.classList.add("turn-red");
+                userAnswer.classList.add("turn-red");
             } 
         })
     });
@@ -169,9 +167,10 @@ function nextQuestion() {
     console.log("Next Question!");
     let question = document.getElementById("question");
     let image = document.getElementById('question-img');
-    let answers = document.querySelectorAll(".answer-btn");
+    let answers = document.getElementsByClassName("answer-btn");
     let questionCounter = document.getElementById('question-number');
 
+    console.log(answers);
     for (answer of answers) {
         answer.classList.remove(
             "turn-green",
