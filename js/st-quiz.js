@@ -104,7 +104,7 @@ function resetColors() {
 };
 
 /** Disables click so user can't make another selection after selecting answer. */
-function disableClick() {
+function disableAnswers() {
     console.log("disabling click...");
     let answers = Array.from(document.querySelectorAll(".answer-btn"));
     console.log(answers);
@@ -112,14 +112,24 @@ function disableClick() {
         answer.style.pointerEvents = 'none';
     })
 };
-
-function enableClick() {
+/** Enables click on answer buttons */
+function enableAnswers() {
     console.log("enabling click...");
     let answers = Array.from(document.querySelectorAll(".answer-btn"));
     console.log(answers);
     answers.forEach(answer => {
         answer.style.pointerEvents = 'auto';
     })
+}
+/** disables next button so user cant move on to next question before selecting answer */
+function disableNextBtn() {
+    let nextButton = document.getElementById("next-question-btn");
+    nextButton.style.pointerEvents = "none";
+}
+/** Enables next button so user can move on to next question */
+function enableNextBtn() {
+    let nextButton = document.getElementById("next-question-btn");
+    nextButton.style.pointerEvents = "auto";
 }
 
 /**
@@ -138,7 +148,7 @@ function startQuiz() {
     let playAgainBtn = document.getElementById("play-again-btn");
     playAgainBtn.classList.add("hidden");
 
-    
+    disableNextBtn();
     
     let answers = Array.from(document.querySelectorAll(".answer-btn"));
 
@@ -177,11 +187,14 @@ function startQuiz() {
  */
 
 function checkAnswer() {
+    enableNextBtn();
     let answerSection = document.getElementById("answer-section");
     answerSection.classList.remove("hidden");
     console.log("checking question");
     console.log(questionNumber);
     let answers = Array.from(document.querySelectorAll(".answer-btn"));
+
+    let nextButton = document.getElementById("next-question-btn");
     
     answers.forEach(answer => {
         answer.addEventListener("click", () => {
@@ -206,14 +219,13 @@ function checkAnswer() {
                 userAnswer.classList.add("turn-red");
             } 
             resetColors();
-            disableClick();
+            disableAnswers();
         })
     });
 
     let engageButton = document.getElementById("first-question-btn");
     engageButton.classList.add("hidden");
 
-    let nextButton = document.getElementById("next-question-btn");
     nextButton.classList.remove("hidden");
     
 };
@@ -224,7 +236,7 @@ function nextQuestion() {
     let image = document.getElementById('question-img');
     let answers = document.getElementsByClassName("answer-btn");
     let questionCounter = document.getElementById('question-number');
-    enableClick();
+    enableAnswers();
     randomColor();
 
     if (questionNumber < easyQuestions.length) {
