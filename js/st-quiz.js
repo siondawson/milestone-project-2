@@ -94,6 +94,7 @@ function randomColor() {
  * Increments question number to 1.
  */
 function startQuiz() {
+    console.log("starting quiz");
     console.log(questionNumber);
     let questionCounter = document.getElementById('question-number');
     let question = document.getElementById('question');
@@ -126,16 +127,18 @@ function startQuiz() {
  * Turns answeer red if incorrect.
  * Calls nextQuestion function.
  */
+
 function checkAnswer() {
+    console.log("checking question");
     console.log(questionNumber);
-    let i = questionNumber - 1;
-    console.log(i);
     let answers = Array.from(document.querySelectorAll(".answer-btn"));
-    let correct = easyQuestions[i].correct;
-    console.log(correct);
     
     answers.forEach(answer => {
         answer.addEventListener("click", () => {
+            let i = questionNumber - 1;
+            
+            let correct = easyQuestions[i].correct;
+            console.log(correct);
             answer.classList.add("user-answer");
             let userAnswer = document.getElementsByClassName("user-answer").item(0);
             console.log(userAnswer);
@@ -189,7 +192,6 @@ function nextQuestion() {
 
     questionCounter.innerHTML = `Question ${questionNumber + 1}`;
     questionNumber++;
-    checkAnswer();
 
 
 }
