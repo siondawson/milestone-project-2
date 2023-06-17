@@ -87,6 +87,40 @@ function randomColor() {
     }
 
 }
+/**
+ * Changes color of unselected buttons back to orange once user has made selection.
+ */
+function resetColors() {
+    console.log("resetting colors..");
+    
+    let answers = Array.from(document.querySelectorAll(".answer-btn"));
+    console.log(answers);
+    answers.forEach(answer => {
+        if (! answer.classList.contains("user-answer")) {
+            answer.style.backgroundColor = "orange";
+        }
+    })
+    
+};
+
+/** Disables click so user can't make another selection after selecting answer. */
+function disableClick() {
+    console.log("disabling click...");
+    let answers = Array.from(document.querySelectorAll(".answer-btn"));
+    console.log(answers);
+    answers.forEach(answer => {
+        answer.style.pointerEvents = 'none';
+    })
+};
+
+function enableClick() {
+    console.log("enabling click...");
+    let answers = Array.from(document.querySelectorAll(".answer-btn"));
+    console.log(answers);
+    answers.forEach(answer => {
+        answer.style.pointerEvents = 'auto';
+    })
+}
 
 /**
  * Resets score to 0, populates question image and answers. 
@@ -171,6 +205,8 @@ function checkAnswer() {
                 console.log("incorrect");
                 userAnswer.classList.add("turn-red");
             } 
+            resetColors();
+            disableClick();
         })
     });
 
@@ -188,12 +224,12 @@ function nextQuestion() {
     let image = document.getElementById('question-img');
     let answers = document.getElementsByClassName("answer-btn");
     let questionCounter = document.getElementById('question-number');
-
+    enableClick();
     randomColor();
 
     if (questionNumber < easyQuestions.length) {
         console.log(answers);
-        for (answer of answers) {
+        for (answer of answers) { //removes selection classes
             answer.classList.remove(
                 "turn-green",
                 "turn-red",
