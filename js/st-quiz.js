@@ -12,7 +12,7 @@ const easyQuestions = [{
 },
 {
     question: "What is the name of this alien",
-    image: `<img src="assets/images/kirk-img.jpeg">`,
+    image: `<img src="assets/images/tribbles.jpeg">`,
     options: ["Vulcan", "Klingon", "Dalek", "Tribble"],
     correct: "Tribble"
 },
@@ -65,11 +65,11 @@ const mediumQuestions = [{
 window.onload = quizPrimed();
 
 /**
- * Disables answer buttons so answer buttons can not be selected until quiz begins.
+ * Disables answer buttons so answer buttons can not be selected until quiz begins. NOT WORKING
  */
 function quizPrimed() {
     
-    document.getElementsByClassName("answer-btn").setAttribute("disabled","disabled");
+    let disabled = document.getElementsByClassName("answer-btn").disabled = true;
     console.log("disabled");
 }
 
@@ -94,7 +94,7 @@ function randomColor() {
  * Increments question number to 1.
  */
 function startQuiz() {
-
+    console.log(questionNumber);
     let questionCounter = document.getElementById('question-number');
     let question = document.getElementById('question');
     let image = document.getElementById('question-img');
@@ -114,7 +114,7 @@ function startQuiz() {
     randomColor();
 
     questionNumber++;
-
+    console.log(questionNumber);
     checkAnswer();
 };
 
@@ -128,7 +128,6 @@ function startQuiz() {
  */
 function checkAnswer() {
     let i = questionNumber - 1;
-
     let answers = Array.from(document.querySelectorAll(".answer-btn"));
     let correct = easyQuestions[i].correct;
     
@@ -142,7 +141,7 @@ function checkAnswer() {
 
             if (result === correct) {
                 console.log("correct");
-                console.log(userAnswer[0]);
+                console.log(userAnswer[i]);
                 let correctAnswer = document.querySelector(".user-answer");
                 correctAnswer.classList.add("turn-green");
                 score++;
@@ -155,9 +154,42 @@ function checkAnswer() {
         })
     });
 
-    nextQuestion();
+    let engageButton = document.getElementById("first-question-btn");
+    engageButton.classList.add("hidden");
+
+    let nextButton = document.getElementById("next-question-btn");
+    nextButton.classList.remove("hidden");
+
+    
 };
 
 function nextQuestion() {
-    let nextBtn = document.getElementById("next-question-btn");
+    console.log("Next Question!");
+    let i = questionNumber - 1;
+    let question = document.getElementById("question");
+    let image = document.getElementById('question-img');
+    let answers = document.querySelectorAll(".answer-btn");
+    let questionCounter = document.getElementById('question-number');
+
+    for (answer of answers) {
+        answer.classList.remove(
+            "turn-green",
+            "turn-red",
+            "user-answer"
+        );
+    }
+   
+    console.log("classes removed");
+    question.innerHTML = easyQuestions[questionNumber].question;
+    image.innerHTML = easyQuestions[questionNumber].image;
+
+    for (let i = 0;i < 4; i++) {
+        answers[i].innerText = easyQuestions[questionNumber].options[i];
+    }
+
+    questionCounter.innerHTML = `Question ${questionNumber + 1}`;
+
+    checkAnswer();
+
+
 }
