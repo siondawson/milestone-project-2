@@ -103,8 +103,18 @@ function startQuiz() {
     let image = document.getElementById('question-img');
     let playAgainBtn = document.getElementById("play-again-btn");
     playAgainBtn.classList.add("hidden");
+
+    
     
     let answers = Array.from(document.querySelectorAll(".answer-btn"));
+
+    for (answer of answers) {
+        answer.classList.remove(
+            "turn-green",
+            "turn-red",
+            "user-answer"
+        );
+    }
     
     question.innerHTML = easyQuestions[0].question;
     questionCounter.innerHTML = `Question ${questionNumber + 1}`;
