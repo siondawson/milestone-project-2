@@ -22,7 +22,7 @@
                 </div>
             </div>
             <!-- QUESTION AREA -->
-            <section id="" class="">
+            <section id="question-section" class="">
                 <div class="container-lcars-left">
                     <div class="row">
                         <div class="col-6 text-center" id="question-area">
@@ -38,18 +38,22 @@
                         </div>
                     </div>
                 </div>
+            </section>
                 <!-- ANSWER AREA -->
-                <div class="container-lcars-right">
-                    <div class="row">
-                        <div class="col-12 text-center" id="answer-area">
-                            <button class="answer-btn" id="answer-1">Answer Button 1253</button>
-                            <button class="answer-btn" id="answer-2">Answer Button 6532</button>
-                            <button class="answer-btn" id="answer-3">Answer Button 2864</button>
-                            <button class="answer-btn" id="answer-4">Answer Button 1172</button>
+                <section id="answer-section">
+                    <div class="container-lcars-right">
+                        <div class="row">
+                            <div class="col-12 text-center" id="answer-area">
+                                <button class="answer-btn" id="answer-1">Answer Button 1253</button>
+                                <button class="answer-btn" id="answer-2">Answer Button 6532</button>
+                                <button class="answer-btn" id="answer-3">Answer Button 2864</button>
+                                <button class="answer-btn" id="answer-4">Answer Button 1172</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
                 <!-- NAV - QUIT and NEXT QUESTION -->
+                <section id="nav-section">
                 <div class="container-lcars-bottom">
                     <div class="row">
                         <div class="col-6 text-center">
@@ -63,9 +67,13 @@
                         <div class="col-6 text-center hidden" id="next-question-btn">
                             <button class="lcars-btn-orange" onclick="nextQuestion()">Next Question</button>
                         </div>
+                        <div class="col-6 text-center hidden" id="play-again-btn">
+                            <button class="lcars-btn-orange" onclick="startQuiz()">Play again!</button>
+                        </div>
                     </div>
                 </div>
-            </section>
+                </section>
+            
         </div>
     </main>
 <script src="js/st-quiz.js"></script>

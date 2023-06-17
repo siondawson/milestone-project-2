@@ -94,11 +94,15 @@ function randomColor() {
  * Increments question number to 1.
  */
 function startQuiz() {
+    score = 0;
+    questionNumber = 0;
     console.log("starting quiz");
     console.log(questionNumber);
     let questionCounter = document.getElementById('question-number');
     let question = document.getElementById('question');
     let image = document.getElementById('question-img');
+    let playAgainBtn = document.getElementById("play-again-btn");
+    playAgainBtn.classList.add("hidden");
     
     let answers = Array.from(document.querySelectorAll(".answer-btn"));
     
@@ -129,6 +133,8 @@ function startQuiz() {
  */
 
 function checkAnswer() {
+    let answerSection = document.getElementById("answer-section");
+    answerSection.classList.remove("hidden");
     console.log("checking question");
     console.log(questionNumber);
     let answers = Array.from(document.querySelectorAll(".answer-btn"));
@@ -173,25 +179,42 @@ function nextQuestion() {
     let answers = document.getElementsByClassName("answer-btn");
     let questionCounter = document.getElementById('question-number');
 
-    console.log(answers);
-    for (answer of answers) {
-        answer.classList.remove(
-            "turn-green",
-            "turn-red",
-            "user-answer"
-        );
+    if (questionNumber < easyQuestions.length) {
+        console.log(answers);
+        for (answer of answers) {
+            answer.classList.remove(
+                "turn-green",
+                "turn-red",
+                "user-answer"
+            );
+        }
+       
+        console.log("classes removed");
+        question.innerHTML = easyQuestions[questionNumber].question;
+        image.innerHTML = easyQuestions[questionNumber].image;
+    
+        for (let i = 0;i < 4; i++) {
+            answers[i].innerText = easyQuestions[questionNumber].options[i];
+        }
+    
+        questionCounter.innerHTML = `Question ${questionNumber + 1}`;
+        questionNumber++;
+    } else {
+        let nextButton = document.getElementById("next-question-btn");
+        nextButton.classList.add("hidden");
+        showResult();
     }
-   
-    console.log("classes removed");
-    question.innerHTML = easyQuestions[questionNumber].question;
-    image.innerHTML = easyQuestions[questionNumber].image;
+}
 
-    for (let i = 0;i < 4; i++) {
-        answers[i].innerText = easyQuestions[questionNumber].options[i];
-    }
-
-    questionCounter.innerHTML = `Question ${questionNumber + 1}`;
-    questionNumber++;
+function showResult() {
+    let answerSection = document.getElementById("answer-section");
+    answerSection.classList.add("hidden");
+    let resultSection = document.getElementById("question-number");
+    resultSection.innerHTML = `You Scored ${score} out of 6`;
+    let question = document.getElementById("question");
+    question.innerHTML = "Thanks for playing!";
+    let playAgainBtn = document.getElementById("play-again-btn");
+    playAgainBtn.classList.remove("hidden");
 
 
 }
