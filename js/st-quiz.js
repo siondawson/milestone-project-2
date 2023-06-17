@@ -62,6 +62,19 @@ const mediumQuestions = [{
 },
 ];
 
+window.onload = quizPrimed();
+
+/**
+ * Disables answer buttons so answer buttons can not be selected until quiz begins.
+ */
+function quizPrimed() {
+    
+    document.getElementsByClassName("answer-btn").setAttribute("disabled","disabled");
+    console.log("disabled");
+}
+
+
+
 /**
  * Applies four different random colors from buttonColors array to answer buttons
  */
@@ -105,6 +118,14 @@ function startQuiz() {
     checkAnswer();
 };
 
+
+/**
+ * Adds click event listener to answer buttons. 
+ * Checks if answer is correct. 
+ * Turns answer green if correct.
+ * Turns answeer red if incorrect.
+ * Calls nextQuestion function.
+ */
 function checkAnswer() {
     let i = questionNumber - 1;
 
@@ -124,12 +145,19 @@ function checkAnswer() {
                 console.log(userAnswer[0]);
                 let correctAnswer = document.querySelector(".user-answer");
                 correctAnswer.classList.add("turn-green");
-                // correctAnswer.classList.remove("answer-btn");
+                score++;
+                
             } else {
                 console.log("incorrect");
                 let incorrectAnswer = document.querySelector(".user-answer");
                 incorrectAnswer.classList.add("turn-red");
-            }
+            } 
         })
     });
+
+    nextQuestion();
+};
+
+function nextQuestion() {
+    let nextBtn = document.getElementById("next-question-btn");
 }

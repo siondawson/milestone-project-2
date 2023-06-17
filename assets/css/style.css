@@ -126,5 +126,9 @@ body {
   }
 
   .turn-red {
-    background: #ff0000 !important;
+    background: #ff1414 !important;
+  }
+
+  .unused-answers {
+    background: orange !important;
   }
