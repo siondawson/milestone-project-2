@@ -56,8 +56,8 @@ const mediumQuestions = [{
 },
 {
     question: "Data has a cat, what is his name?",
-    image: `<img src="assets/images/kirk-img.jpeg">`,
-    options: ["Sqeak", "Spot", "cat", "dog"],
+    image: `<img src="assets/images/data-spot.jpeg">`,
+    options: ["Tyler", "Spot", "Bud", "Monster"],
     correct: "Spot"
 },
 {
@@ -66,7 +66,80 @@ const mediumQuestions = [{
     options: ["Richard III", "Macbeth", "Julius Caesar", "The Tempest"],
     correct: "Julius Caesar"
 },
+{
+    question: "Which book does Kahn reference with his final line 'from hell's heart I stab at thee, for hate's sake I spit my last breath at thee.'?",
+    image: `<img src="assets/images/from-hells-heart.jpeg">`,
+    options: ["To Kill a Mockingbird", "Moby Dick", "Catch-22", "Ninteen Eighty-Four"],
+    correct: "Moby Dick"
+},
+{
+    question: "'Second star to the right and straight on 'til morning.' is a quote from?",
+    image: `<img src="assets/images/second-star.jpeg">`,
+    options: ["Peter Pan", "Alice in Wonderland", "The Wizard of Oz", "Snow White"],
+    correct: "Spot"
+}
 ];
+
+const hardQuestions = [{
+    question: "hard q 1",
+    image: `<img src="assets/images/redshirt.jpeg">`,
+    options: ["hard a 1", "hard a 2", "hard a 3", "hard 4"],
+    correct: "hard a 1"
+},
+{
+    question: "hard q 2",
+    image: `<img src="assets/images/redshirt.jpeg">`,
+    options: ["hard a 1", "hard a 2", "hard a 3", "hard 4"],
+    correct: "hard a 1"
+},
+{
+    question: "hard q 3",
+    image: `<img src="assets/images/redshirt.jpeg">`,
+    options: ["hard a 1", "hard a 2", "hard a 3", "hard 4"],
+    correct: "hard a 1"
+},
+{
+    question: "hard q 4",
+    image: `<img src="assets/images/redshirt.jpeg">`,
+    options: ["hard a 1", "hard a 2", "hard a 3", "hard 4"],
+    correct: "hard a 1"
+},
+{
+    question: "hard q 5",
+    image: `<img src="assets/images/redshirt.jpeg">`,
+    options: ["hard a 1", "hard a 2", "hard a 3", "hard 4"],
+    correct: "hard a 1"
+},
+{
+    question: "hard q 6",
+    image: `<img src="assets/images/redshirt.jpeg">`,
+    options: ["hard a 1", "hard a 2", "hard a 3", "hard 4"],
+    correct: "hard a 1"
+},
+
+];
+
+const bonusQuestions = [{
+    question: "bonus q 1",
+    image: `<img src="assets/images/redshirt.jpeg">`,
+    options: ["bonus a 1", "bonus a 2", "bonus a 3", "bonus 4"],
+    correct: "bonus a 1"
+},
+{
+    question: "bonus q 2",
+    image: `<img src="assets/images/redshirt.jpeg">`,
+    options: ["bonus a 1", "bonus a 2", "bonus a 3", "bonus 4"],
+    correct: "bonus a 1"
+},
+{
+    question: "bonus q 3",
+    image: `<img src="assets/images/redshirt.jpeg">`,
+    options: ["bonus a 1", "bonus a 2", "bonus a 3", "bonus 4"],
+    correct: "bonus a 1"
+},
+
+];
+
 
 window.onload = quizPrimed();
 
