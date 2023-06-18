@@ -60,6 +60,12 @@ const mediumQuestions = [{
     options: ["Sqeak", "Spot", "cat", "dog"],
     correct: "Spot"
 },
+{
+    question: '"Cry "Havok!" and let slip the dogs of war" is a quote from which Shakespeare play?',
+    image: `<img src="assets/images/cry-havok.gif">`,
+    options: ["Richard III", "Macbeth", "Julius Caesar", "The Tempest"],
+    correct: "Julius Caesar"
+},
 ];
 
 window.onload = quizPrimed();
