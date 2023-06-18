@@ -1,5 +1,6 @@
 let score = 0;
 let questionNumber = 0;
+let index = 0;
 console.log(questionNumber);
 
 const buttonColors = ["#E95", "#97A", "#FC6", "#069", "#01E", "#F90", "#C66", "#B62", "#F96", "#36F", "#746", "#821", "#36C", "#99F", "#B41", "#F93", "#D64", "#59F", "#C9C", "#008", "#646", "#9CF", "#CDF", "#45B", "#BA5", "#FF9", "#C69", "#99C", "#C9C", "#68C", "#FC6", "#A53"]
@@ -285,14 +286,15 @@ function startQuiz() {
         );
     }
     
-    question.innerHTML = finalQuizQuestions[0].question;
+    question.innerHTML = finalQuizQuestions[0][0].question;
     questionCounter.innerHTML = `Question ${questionNumber + 1}`;
 
     image.classList.remove('hidden');
-    image.innerHTML = finalQuizQuestions[0].image;
+    image.innerHTML = finalQuizQuestions[0][0].image;
 
     for (let i = 0;i < 4; i++) {
-        answers[i].innerText = finalQuizQuestions[0].options[i];
+        console.log(finalQuizQuestions[0][0].options[i] )
+        answers[i].innerText = finalQuizQuestions[0][0].options[i];
     }
 
     randomColor();
@@ -325,7 +327,7 @@ function checkAnswer() {
             enableNextBtn();
             let i = questionNumber - 1;
             
-            let correct = finalQuizQuestions[i].correct;
+            let correct = finalQuizQuestions[i][i].correct;
             console.log(correct);
             answer.classList.add("user-answer");
             let userAnswer = document.getElementsByClassName("user-answer").item(0);
@@ -365,6 +367,8 @@ function nextQuestion() {
     randomColor();
     disableNextBtn();
 
+    index++;
+
     if (questionNumber < finalQuizQuestions.length) {
         console.log(answers);
         
@@ -379,11 +383,11 @@ function nextQuestion() {
         console.log("classes removed");
        
         console.log("disabling next btn..")
-        question.innerHTML = finalQuizQuestions[questionNumber].question;
-        image.innerHTML = finalQuizQuestions[questionNumber].image;
+        question.innerHTML = finalQuizQuestions[0][questionNumber].question;
+        image.innerHTML = finalQuizQuestions[0][questionNumber].image;
     
         for (let i = 0;i < 4; i++) {
-            answers[i].innerText = finalQuizQuestions[questionNumber].options[i];
+            answers[i].innerText = finalQuizQuestions[0][questionNumber].options[i];
         }
     
         questionCounter.innerHTML = `Question ${questionNumber + 1}`;
