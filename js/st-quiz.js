@@ -140,6 +140,8 @@ const bonusQuestions = [{
 
 ];
 
+const finalQuizQuestions = [];
+
 /** https://forum.freecodecamp.org/t/how-to-make-math-random-not-repeat-same-numbers/417973/10 */
 function shuffleArray(arr) {
     for (let i = arr.length -1; i > 0; i--) {
@@ -168,9 +170,14 @@ function generateQuizQuestions() {
     let randomBonusQuestion = bonusQuestions[Math.floor(Math.random()*bonusQuestions.length)];
     randomQuizQuestions.push(randomBonusQuestion);
 
-    let finalQuizQuestions = randomQuizQuestions.flat(Infinity);
-    console.log(finalQuizQuestions);
+    let shuffledQuizQuestions = randomQuizQuestions.flat(Infinity);
+    console.log(shuffledQuizQuestions);
+    finalQuizQuestions.push(shuffledQuizQuestions);
+    return finalQuizQuestions;
+
 }
+
+
 
 
 
@@ -252,6 +259,7 @@ function enableNextBtn() {
  * Increments question number to 1.
  */
 function startQuiz() {
+    console.log(finalQuizQuestions);
     score = 0;
     questionNumber = 0;
     console.log("starting quiz");
@@ -263,6 +271,7 @@ function startQuiz() {
     playAgainBtn.classList.add("hidden");
 
     generateQuizQuestions();
+    console.log(finalQuizQuestions);
 
     disableNextBtn();
     
