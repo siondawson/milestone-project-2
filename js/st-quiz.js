@@ -70,7 +70,7 @@ window.onload = quizPrimed();
 function quizPrimed() {
     
     document.getElementsByClassName("answer-btn").disabled = true;
-    console.log("disabled");
+    console.log("");
 }
 
 
@@ -187,7 +187,6 @@ function startQuiz() {
  */
 
 function checkAnswer() {
-    enableNextBtn();
     let answerSection = document.getElementById("answer-section");
     answerSection.classList.remove("hidden");
     console.log("checking question");
@@ -198,6 +197,7 @@ function checkAnswer() {
     
     answers.forEach(answer => {
         answer.addEventListener("click", () => {
+            enableNextBtn();
             let i = questionNumber - 1;
             
             let correct = easyQuestions[i].correct;
@@ -238,9 +238,11 @@ function nextQuestion() {
     let questionCounter = document.getElementById('question-number');
     enableAnswers();
     randomColor();
+    disableNextBtn();
 
     if (questionNumber < easyQuestions.length) {
         console.log(answers);
+        
         for (answer of answers) { //removes selection classes
             answer.classList.remove(
                 "turn-green",
@@ -248,8 +250,10 @@ function nextQuestion() {
                 "user-answer"
             );
         }
-       
+        
         console.log("classes removed");
+       
+        console.log("disabling next btn..")
         question.innerHTML = easyQuestions[questionNumber].question;
         image.innerHTML = easyQuestions[questionNumber].image;
     
