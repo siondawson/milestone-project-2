@@ -140,6 +140,41 @@ const bonusQuestions = [{
 
 ];
 
+/** https://forum.freecodecamp.org/t/how-to-make-math-random-not-repeat-same-numbers/417973/10 */
+function shuffleArray(arr) {
+    for (let i = arr.length -1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+    
+}
+
+function generateQuizQuestions() {
+    const randomQuizQuestions = [];
+    
+    let shuffledEasyQuestions = shuffleArray(easyQuestions).slice(0, 3);
+    console.log(shuffledEasyQuestions);
+    randomQuizQuestions.push(shuffledEasyQuestions);
+
+    let shuffledMediumQuestions = shuffleArray(mediumQuestions).slice(0, 3);
+    console.log(shuffledMediumQuestions);
+    randomQuizQuestions.push(shuffledMediumQuestions);
+
+    let shuffledHardQuestions = shuffleArray(hardQuestions).slice(0, 3);
+    console.log(shuffledHardQuestions);
+    randomQuizQuestions.push(shuffledHardQuestions);
+
+    let randomBonusQuestion = bonusQuestions[Math.floor(Math.random()*bonusQuestions.length)];
+    randomQuizQuestions.push(randomBonusQuestion);
+
+    let finalQuizQuestions = randomQuizQuestions.flat(Infinity);
+    console.log(finalQuizQuestions);
+}
+
+
+
+
 
 window.onload = quizPrimed();
 
@@ -227,6 +262,8 @@ function startQuiz() {
     let playAgainBtn = document.getElementById("play-again-btn");
     playAgainBtn.classList.add("hidden");
 
+    generateQuizQuestions();
+
     disableNextBtn();
     
     let answers = Array.from(document.querySelectorAll(".answer-btn"));
@@ -239,14 +276,14 @@ function startQuiz() {
         );
     }
     
-    question.innerHTML = easyQuestions[0].question;
+    question.innerHTML = finalQuizQuestions[0].question;
     questionCounter.innerHTML = `Question ${questionNumber + 1}`;
 
     image.classList.remove('hidden');
-    image.innerHTML = easyQuestions[0].image;
+    image.innerHTML = finalQuizQuestions[0].image;
 
     for (let i = 0;i < 4; i++) {
-        answers[i].innerText = easyQuestions[0].options[i];
+        answers[i].innerText = finalQuizQuestions[0].options[i];
     }
 
     randomColor();
@@ -279,7 +316,7 @@ function checkAnswer() {
             enableNextBtn();
             let i = questionNumber - 1;
             
-            let correct = easyQuestions[i].correct;
+            let correct = finalQuizQuestions[i].correct;
             console.log(correct);
             answer.classList.add("user-answer");
             let userAnswer = document.getElementsByClassName("user-answer").item(0);
@@ -319,7 +356,7 @@ function nextQuestion() {
     randomColor();
     disableNextBtn();
 
-    if (questionNumber < easyQuestions.length) {
+    if (questionNumber < finalQuizQuestions.length) {
         console.log(answers);
         
         for (answer of answers) { //removes selection classes
@@ -333,11 +370,11 @@ function nextQuestion() {
         console.log("classes removed");
        
         console.log("disabling next btn..")
-        question.innerHTML = easyQuestions[questionNumber].question;
-        image.innerHTML = easyQuestions[questionNumber].image;
+        question.innerHTML = finalQuizQuestions[questionNumber].question;
+        image.innerHTML = finalQuizQuestions[questionNumber].image;
     
         for (let i = 0;i < 4; i++) {
-            answers[i].innerText = easyQuestions[questionNumber].options[i];
+            answers[i].innerText = finalQuizQuestions[questionNumber].options[i];
         }
     
         questionCounter.innerHTML = `Question ${questionNumber + 1}`;
@@ -353,7 +390,7 @@ function showResult() {
     let answerSection = document.getElementById("answer-section");
     answerSection.classList.add("hidden");
     let resultSection = document.getElementById("question-number");
-    resultSection.innerHTML = `You Scored ${score} out of 6`;
+    resultSection.innerHTML = `You Scored ${score} out of 10`;
     let question = document.getElementById("question");
     question.innerHTML = "Thanks for playing!";
     let playAgainBtn = document.getElementById("play-again-btn");
