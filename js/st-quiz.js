@@ -142,7 +142,7 @@ const bonusQuestions = [{
 
 ];
 
-const finalQuizQuestions = [];
+let finalQuizQuestions = [];
 
 /** https://forum.freecodecamp.org/t/how-to-make-math-random-not-repeat-same-numbers/417973/10 */
 function shuffleArray(arr) {
@@ -174,7 +174,7 @@ function generateQuizQuestions() {
 
     let shuffledQuizQuestions = randomQuizQuestions.flat(Infinity);
     console.log(shuffledQuizQuestions);
-    finalQuizQuestions.push(shuffledQuizQuestions);
+    finalQuizQuestions = shuffledQuizQuestions;
     return finalQuizQuestions;
 
 }
@@ -281,15 +281,15 @@ function startQuiz() {
         );
     }
     
-    question.innerHTML = finalQuizQuestions[0][questionNumber].question;
+    question.innerHTML = finalQuizQuestions[questionNumber].question;
     questionCounter.innerHTML = `Question ${questionNumber + 1}`;
 
     image.classList.remove('hidden');
-    image.innerHTML = finalQuizQuestions[0][questionNumber].image;
+    image.innerHTML = finalQuizQuestions[questionNumber].image;
 
     for (let i = 0;i < 4; i++) {
-        console.log(finalQuizQuestions[0][questionNumber].options[i] )
-        answers[i].innerText = finalQuizQuestions[0][questionNumber].options[i];
+        console.log(finalQuizQuestions[questionNumber].options[i] )
+        answers[i].innerText = finalQuizQuestions[questionNumber].options[i];
     }
 
     randomColor();
@@ -322,7 +322,7 @@ function checkAnswer() {
             enableNextBtn();
             let i = questionNumber - 1;
             
-            let correct = finalQuizQuestions[i][i].correct;
+            let correct = finalQuizQuestions[i].correct;
             console.log(correct);
             answer.classList.add("user-answer");
             let userAnswer = document.getElementsByClassName("user-answer").item(0);
@@ -383,11 +383,11 @@ function nextQuestion() {
         console.log("classes removed");
        
         console.log("disabling next btn..")
-        question.innerHTML = finalQuizQuestions[0][questionNumber].question;
-        image.innerHTML = finalQuizQuestions[0][questionNumber].image;
+        question.innerHTML = finalQuizQuestions[questionNumber].question;
+        image.innerHTML = finalQuizQuestions[questionNumber].image;
     
         for (let i = 0;i < 4; i++) {
-            answers[i].innerText = finalQuizQuestions[0][questionNumber].options[i];
+            answers[i].innerText = finalQuizQuestions[questionNumber].options[i];
         }
     
         questionCounter.innerHTML = `Question ${questionNumber + 1}`;
