@@ -24,7 +24,7 @@ body {
     height: 50px;
     width: 50%;
     margin: 4px;
-    font-size: 120%;
+    /* font-size: 120%; */
     font-weight: lighter;
 
 }
@@ -50,6 +50,7 @@ body {
 
 .container-lcars-top { 
     padding: 15px 30px;
+    margin-top: 10px;
     border-style: solid;
     border-color: #97A;
     border-width: 10px 50px 0px 50px;
@@ -115,7 +116,9 @@ body {
 
   .array-img {
     height: 150px;
+    /* max-width: 150px; */
     display: inherit;
+    overflow: hidden;
 
   }
 
