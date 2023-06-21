@@ -351,7 +351,7 @@ function checkAnswer() {
 
     nextButton.classList.remove("hidden");
 
-    
+    console.log("score is " + score);
 };
 
 function nextQuestion() {
@@ -408,6 +408,13 @@ function showResult() {
     question.innerHTML = "Thanks for playing!";
     let playAgainBtn = document.getElementById("play-again-btn");
     playAgainBtn.classList.remove("hidden");
-
-
+    console.log("arrray length" + finalQuizQuestions.length);
+    
+    if (finalQuizQuestions.length === 10) {
+        questionNumber = 0;
+        score = 0;
+        console.log("score is " + score);
+        console.log(finalQuizQuestions);
+        generateQuizQuestions();
+    }
 }
