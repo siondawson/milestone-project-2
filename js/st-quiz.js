@@ -8,37 +8,37 @@ const buttonColors = ["#E95", "#97A", "#FC6", "#F90", "#C66", "#B62", "#F96", "#
 
 const easyQuestions = [{
     question: "What ship does Kirk command?",
-    image: `<img src="assets/images/kirk-img.jpeg">`,
+    image: `<img src="assets/images/kirk-img.jpeg" id="question-img">`,
     options: ["SS Botany Bay", "USS Enterprise", "USS Voyager", "USS Constellation"],
     correct: "USS Enterprise"
 },
 {
     question: "What is the name of this alien",
-    image: `<img src="assets/images/tribbles.jpeg">`,
+    image: `<img src="assets/images/tribbles.jpeg" id="question-img">`,
     options: ["Vulcan", "Klingon", "Dalek", "Tribble"],
     correct: "Tribble"
 },
 {
     question: '"Bones" is the nickname of which character?',
-    image: `<img src="assets/images/st-tos-cast.jpeg">`,
+    image: `<img src="assets/images/st-tos-cast.jpeg" id="question-img">`,
     options: ["Spock", "Captain Picard", "Dr. McCoy", "Dr. Crusher"],
     correct: "Dr. McCoy"
 },
 {
     question: "How many years will their mission last?",
-    image: `<img src="assets/images/enterprise.jpeg">`,
+    image: `<img src="assets/images/enterprise.jpeg" id="question-img">`,
     options: ["5", "1", "7", "9"],
     correct: "5"
 },
 {
     question: "Who was captain of the Enterprise before Kirk?",
-    image: `<img src="assets/images/enterprise.jpeg">`,
+    image: `<img src="assets/images/enterprise.jpeg" id="question-img">`,
     options: ["Spock", "Janeway", "Picard", "Pike"],
     correct: "Pike"
 },
 {
     question: "Spock is half Vulcan and half ...?",
-    image: `<img src="assets/images/kirk-img.jpeg">`,
+    image: `<img src="assets/images/kirk-img.jpeg" id="question-img">`,
     options: ["Borg", "Human", "Klingon", "Andorian"],
     correct: "Human"
 }
@@ -46,75 +46,75 @@ const easyQuestions = [{
 
 const mediumQuestions = [{
     question: "In the origianl series, What usually happens to minor characters wearing red uniforms?",
-    image: `<img src="assets/images/redshirt.jpeg">`,
+    image: `<img src="assets/images/redshirt.jpeg" id="question-img">`,
     options: ["They die", "Get promoted", "Operate the tricorder", "Save the main cast"],
     correct: "They die"
 },
 {
     question: '"The Doctor" in Voyager is a ...?',
-    image: `<img src="assets/images/kirk-img.jpeg">`,
+    image: `<img src="assets/images/kirk-img.jpeg" id="question-img">`,
     options: ["Human", "Robot", "Hologram", "Android"],
     correct: "Hologram"
 },
 {
     question: "Data has a cat, what is his name?",
-    image: `<img src="assets/images/data-spot.jpeg">`,
+    image: `<img src="assets/images/data-spot.jpeg" id="question-img">`,
     options: ["Tyler", "Spot", "Bud", "Monster"],
     correct: "Spot"
 },
 {
     question: '"Cry "Havok!" and let slip the dogs of war" is a quote from which Shakespeare play?',
-    image: `<img src="assets/images/cry-havok.gif">`,
+    image: `<img src="assets/images/cry-havok.gif" id="question-img">`,
     options: ["Richard III", "Macbeth", "Julius Caesar", "The Tempest"],
     correct: "Julius Caesar"
 },
 {
     question: "Which book does Kahn reference with his final line 'from hell's heart I stab at thee, for hate's sake I spit my last breath at thee.'?",
-    image: `<img src="assets/images/from-hells-heart.jpeg">`,
+    image: `<img src="assets/images/from-hells-heart.jpeg" id="question-img">`,
     options: ["To Kill a Mockingbird", "Moby Dick", "Catch-22", "Ninteen Eighty-Four"],
     correct: "Moby Dick"
 },
 {
     question: "'Second star to the right and straight on 'til morning.' is a quote from?",
-    image: `<img src="assets/images/second-star.jpeg">`,
+    image: `<img src="assets/images/second-star.jpeg" id="question-img">`,
     options: ["Peter Pan", "Alice in Wonderland", "The Wizard of Oz", "Snow White"],
-    correct: "Spot"
+    correct: "Peter Pan"
 }
 ];
 
 const hardQuestions = [{
     question: "hard q 1",
-    image: `<img src="assets/images/redshirt.jpeg">`,
+    image: `<img src="assets/images/redshirt.jpeg" id="question-img">`,
     options: ["hard a 1", "hard a 2", "hard a 3", "hard 4"],
     correct: "hard a 1"
 },
 {
     question: "hard q 2",
-    image: `<img src="assets/images/redshirt.jpeg">`,
+    image: `<img src="assets/images/redshirt.jpeg" id="question-img">`,
     options: ["hard a 1", "hard a 2", "hard a 3", "hard 4"],
     correct: "hard a 1"
 },
 {
     question: "hard q 3",
-    image: `<img src="assets/images/redshirt.jpeg">`,
+    image: `<img src="assets/images/redshirt.jpeg" id="question-img">`,
     options: ["hard a 1", "hard a 2", "hard a 3", "hard 4"],
     correct: "hard a 1"
 },
 {
     question: "hard q 4",
-    image: `<img src="assets/images/redshirt.jpeg">`,
+    image: `<img src="assets/images/redshirt.jpeg" id="question-img">`,
     options: ["hard a 1", "hard a 2", "hard a 3", "hard 4"],
     correct: "hard a 1"
 },
 {
     question: "hard q 5",
-    image: `<img src="assets/images/redshirt.jpeg">`,
+    image: `<img src="assets/images/redshirt.jpeg" id="question-img">`,
     options: ["hard a 1", "hard a 2", "hard a 3", "hard 4"],
     correct: "hard a 1"
 },
 {
     question: "hard q 6",
-    image: `<img src="assets/images/redshirt.jpeg">`,
+    image: `<img src="assets/images/redshirt.jpeg" id="question-img">`,
     options: ["hard a 1", "hard a 2", "hard a 3", "hard 4"],
     correct: "hard a 1"
 },
@@ -123,19 +123,19 @@ const hardQuestions = [{
 
 const bonusQuestions = [{
     question: "bonus q 1",
-    image: `<img src="assets/images/redshirt.jpeg">`,
+    image: `<img src="assets/images/redshirt.jpeg" id="question-img">`,
     options: ["bonus a 1", "bonus a 2", "bonus a 3", "bonus 4"],
     correct: "bonus a 1"
 },
 {
     question: "bonus q 2",
-    image: `<img src="assets/images/redshirt.jpeg">`,
+    image: `<img src="assets/images/redshirt.jpeg" id="question-img">`,
     options: ["bonus a 1", "bonus a 2", "bonus a 3", "bonus 4"],
     correct: "bonus a 1"
 },
 {
     question: "bonus q 3",
-    image: `<img src="assets/images/redshirt.jpeg">`,
+    image: `<img src="assets/images/redshirt.jpeg" id="question-img">`,
     options: ["bonus a 1", "bonus a 2", "bonus a 3", "bonus 4"],
     correct: "bonus a 1"
 },
