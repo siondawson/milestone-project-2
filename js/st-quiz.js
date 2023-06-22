@@ -69,7 +69,7 @@ const mediumQuestions = [{
     correct: "Julius Caesar"
 },
 {
-    question: "Which book does Kahn reference with his final line 'from hell's heart I stab at thee, for hate's sake I spit my last breath at thee.'?",
+    question: "Which classic novel does Kahn reference with his final line 'from hell's heart I stab at thee, for hate's sake I spit my last breath at thee.'?",
     image: `<img src="assets/images/from-hells-heart.jpeg" id="question-img">`,
     options: ["To Kill a Mockingbird", "Moby Dick", "Catch-22", "Ninteen Eighty-Four"],
     correct: "Moby Dick"
