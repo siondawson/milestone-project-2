@@ -15,8 +15,8 @@ const easyQuestions = [{
 {
     question: "What is the name of these aliens?",
     image: `<img src="assets/images/tribbles.jpeg" id="question-img">`,
-    options: ["Vulcan", "Klingon", "Shatner", "Tribble"],
-    correct: "Tribble"
+    options: ["Vulcans", "Klingons", "Shatners", "Tribble"],
+    correct: "Tribbles"
 },
 {
     question: '"Bones" is the nickname of which character?',
@@ -113,10 +113,10 @@ const hardQuestions = [{
     correct: "Patrick Stewart"
 },
 {
-    question: "hard q 6",
-    image: `<img src="assets/images/redshirt.jpeg" id="question-img">`,
-    options: ["hard a 1", "hard a 2", "hard a 3", "hard 4"],
-    correct: "hard a 1"
+    question: "In this scene what song do they sing?",
+    image: `<img src="assets/images/campfire.jpeg" id="question-img">`,
+    options: ["Row, Row, Row Your Boat", "Three Blind Mice", "Londons Burning", "Campdown Races"],
+    correct: "Row, Row, Row Your Boat"
 },
 
 ];
