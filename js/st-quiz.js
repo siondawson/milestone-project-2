@@ -13,9 +13,9 @@ const easyQuestions = [{
     correct: "USS Enterprise"
 },
 {
-    question: "What is the name of this alien",
+    question: "What is the name of these aliens?",
     image: `<img src="assets/images/tribbles.jpeg" id="question-img">`,
-    options: ["Vulcan", "Klingon", "Dalek", "Tribble"],
+    options: ["Vulcan", "Klingon", "Shatner", "Tribble"],
     correct: "Tribble"
 },
 {
@@ -38,7 +38,7 @@ const easyQuestions = [{
 },
 {
     question: "Spock is half Vulcan and half ...?",
-    image: `<img src="assets/images/kirk-img.jpeg" id="question-img">`,
+    image: `<img src="assets/images/spock.jpeg" id="question-img">`,
     options: ["Borg", "Human", "Klingon", "Andorian"],
     correct: "Human"
 }
@@ -52,7 +52,7 @@ const mediumQuestions = [{
 },
 {
     question: '"The Doctor" in Voyager is a ...?',
-    image: `<img src="assets/images/kirk-img.jpeg" id="question-img">`,
+    image: `<img src="assets/images/the-doctor.jpeg" id="question-img">`,
     options: ["Human", "Robot", "Hologram", "Android"],
     correct: "Hologram"
 },
@@ -83,34 +83,34 @@ const mediumQuestions = [{
 ];
 
 const hardQuestions = [{
-    question: "hard q 1",
-    image: `<img src="assets/images/redshirt.jpeg" id="question-img">`,
-    options: ["hard a 1", "hard a 2", "hard a 3", "hard 4"],
-    correct: "hard a 1"
+    question: "What were The Borg originally conceptualised as being?",
+    image: `<img src="assets/images/the-borg.jpeg" id="question-img">`,
+    options: ["Androids", "Insects", "Humanoids", "Cyborgs"],
+    correct: "Insects"
 },
 {
-    question: "hard q 2",
-    image: `<img src="assets/images/redshirt.jpeg" id="question-img">`,
-    options: ["hard a 1", "hard a 2", "hard a 3", "hard 4"],
-    correct: "hard a 1"
+    question: "Who talked Nichelle Nicholls out of leaving TOS?",
+    image: `<img src="assets/images/nichelle-nichols.jpeg" id="question-img">`,
+    options: ["Malcolm X", "Gene Roddenberry", "Rosa Parks", "Martin Luther King Jr."],
+    correct: "Martin Luther King Jr."
 },
 {
-    question: "hard q 3",
-    image: `<img src="assets/images/redshirt.jpeg" id="question-img">`,
-    options: ["hard a 1", "hard a 2", "hard a 3", "hard 4"],
-    correct: "hard a 1"
+    question: 'Which character said "The only person you’re truly competing against is yourself."?',
+    image: `<img src="assets/images/starfleet.png" id="question-img">`,
+    options: ["Spock", "Jean-Luc Picard", "James Kirk", "Kathryn Janeway"],
+    correct: "Jean-Luc Picard"
 },
 {
-    question: "hard q 4",
-    image: `<img src="assets/images/redshirt.jpeg" id="question-img">`,
-    options: ["hard a 1", "hard a 2", "hard a 3", "hard 4"],
-    correct: "hard a 1"
+    question: "Which actor devised the initial words of the Kligon language?",
+    image: `<img src="assets/images/st-tos-cast.jpeg" id="question-img">`,
+    options: ["James Doohan", "DeForest Kelley", "Leonard Nimoy", "William Shatner"],
+    correct: "James Doohan"
 },
 {
-    question: "hard q 5",
-    image: `<img src="assets/images/redshirt.jpeg" id="question-img">`,
-    options: ["hard a 1", "hard a 2", "hard a 3", "hard 4"],
-    correct: "hard a 1"
+    question: 'Who became known as the "unknown shakesperian actor"?',
+    image: `<img src="assets/images/shakespeare.jpeg" id="question-img">`,
+    options: ["William Shatner", "Christopher Plummer", "Avery Brooks", "Patrick Stewart"],
+    correct: "Patrick Stewart"
 },
 {
     question: "hard q 6",
@@ -122,22 +122,22 @@ const hardQuestions = [{
 ];
 
 const bonusQuestions = [{
-    question: "bonus q 1",
-    image: `<img src="assets/images/redshirt.jpeg" id="question-img">`,
-    options: ["bonus a 1", "bonus a 2", "bonus a 3", "bonus 4"],
-    correct: "bonus a 1"
+    question: "What was Gene Roddenberry's original title for Star Trek",
+    image: `<img src="assets/images/starfleet.png" id="question-img">`,
+    options: ["Coronation Street in Space", "Western in the Stars", "Wagon Train to the Stars", "Space Wagon to the Stars"],
+    correct: "Wagon Train to the Stars"
 },
 {
-    question: "bonus q 2",
-    image: `<img src="assets/images/redshirt.jpeg" id="question-img">`,
-    options: ["bonus a 1", "bonus a 2", "bonus a 3", "bonus 4"],
-    correct: "bonus a 1"
+    question: "Who is the only person to have worked or appeared on every series of Star Trek?",
+    image: `<img src="assets/images/starfleet.png" id="question-img">`,
+    options: ["Gene Roddenberry", "Majel Barrett", "Leonard Nimoy", "William Shatner"],
+    correct: "Majel Barrett"
 },
 {
-    question: "bonus q 3",
-    image: `<img src="assets/images/redshirt.jpeg" id="question-img">`,
-    options: ["bonus a 1", "bonus a 2", "bonus a 3", "bonus 4"],
-    correct: "bonus a 1"
+    question: 'What is the principle of the "Prime Directive"?',
+    image: `<img src="assets/images/starfleet.png" id="question-img">`,
+    options: ["Non-violence", "Non-intervention", "Exploration", "Diplomacy"],
+    correct: "Non-intervention"
 },
 
 ];
