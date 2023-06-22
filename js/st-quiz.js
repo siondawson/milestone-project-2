@@ -15,7 +15,7 @@ const easyQuestions = [{
 {
     question: "What is the name of these aliens?",
     image: `<img src="assets/images/tribbles.jpeg" id="question-img">`,
-    options: ["Vulcans", "Klingons", "Shatners", "Tribble"],
+    options: ["Vulcans", "Klingons", "Shatners", "Tribbles"],
     correct: "Tribbles"
 },
 {
