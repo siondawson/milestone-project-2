@@ -101,7 +101,7 @@ const hardQuestions = [{
     correct: "Jean-Luc Picard"
 },
 {
-    question: "Which actor devised the initial words of the Kligon language?",
+    question: "Which actor devised the initial words of the Klingon language?",
     image: `<img src="assets/images/st-tos-cast.jpeg" id="question-img">`,
     options: ["James Doohan", "DeForest Kelley", "Leonard Nimoy", "William Shatner"],
     correct: "James Doohan"
