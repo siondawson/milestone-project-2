@@ -1,7 +1,7 @@
-@font-face {
+/* @font-face {
     font-family: "lcars";
     src: url("/assets/lcars.woff") format("woff");
-  }
+  } */
 
 html {
     width: 100%;
@@ -10,18 +10,19 @@ html {
 
 
 body {
-    /* font-family: "lcars"; */
+    font-family: 'Kanit', sans-serif;
     background: black;
     color: white;
     width: 100%;
 }
 
 #quiz-tite {
-    font-family: "lcars";
+    font-family: 'Kanit', sans-serif;
+    font-style: ital;
 }
 
 #quiz-instructions {
-    font-family: "lcars";
+    
 }
 
 .answer-btn {
@@ -107,7 +108,7 @@ body {
     border-radius: 50px 50px 50px 50px;
     box-shadow: none;
     height: 50px;
-    width: 80px;
+    width: 90px;
     margin: 0 auto;
     /* font-weight: lighter; */
     /* white-space: normal; */
@@ -115,6 +116,18 @@ body {
   
   .lcars-btn-orange:hover {
     opacity: 0.6;
+  }
+
+  .lcars-btn-red {
+    display: block;
+    background: red;
+    border-radius: 50px 50px 50px 50px;
+    box-shadow: none;
+    height: 50px;
+    width: 90px;
+    margin: 0 auto;
+    /* font-weight: lighter; */
+    /* white-space: normal; */
   }
 
   a {
