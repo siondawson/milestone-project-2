@@ -54,7 +54,23 @@ Once a selection has been made the next question button will be enabled and user
 
 A button allowing the user to quit the quiz to the homepage will be visible at all times. 
 
-## Quix - design
+# Design
+
+## Appearence
+
+In order to present the user with an experience in keeping with the look and feel of Star Trek, I wanted the CSS to emulate the look of the computer panels in the show. In preperation for this project I disvered a CSS template to achieve this. This was modified for my own needs as is as presented in the project. 
+
+## Color scheme 
+
+The colors we're used from those identified in [this github repository](https://github.com/frohoff/ctfd-trektheme). Three colors were chosen for the main 'LCARS' panels, the rest were put into array that allowed their random application to the answer buttons each time a new question is loaded. Darker colors which caused contrast issues we're removed. 
+
+## 'LCARS' Panels 
+
+Library Computer Access/ Retrieval System (LCARS). Fictional computer system designed by Michael Okuda which first appeared in Star Trek: The Next Generation.
+
+Using the above github repository I studied the use of divs and CSS borders to achieve the 'LCARS' style look and modified for my own use. I created four seperate classes within style.css which could be applied to an outer div to create the desired look.  
+
+## Quiz - design
 
 The quiz itself will consist of ten questions drawn from a possible 21. The quiz will randomly select these question from four seperate arrays:
 
@@ -67,6 +83,5 @@ Three questions each will be selected from easy, medium and hard questions. One 
 
 This approach will allow for quiz questions to be modfied, changed or expanded on without needing to modify the functionality of the quiz itself. 
 
-## Appearence
+In any changes or new questions it must be ensured that the string 'correct' exactly matches the correct answer in the list of 'options' for the quiz to function correctly.   
 
-In order to present the user with an experience in keeping with the look and feel of Star Trek, I wanted the CSS to emulate the look of the computer panels in the show. In preperation for this project I disvered a CSS template to achieve this. This was modified for my own needs as is as presented in the project. 
