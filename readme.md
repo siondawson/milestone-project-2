@@ -177,6 +177,58 @@ Extensive manual testing of Javascript functionality was carried out at all stag
 
 4. Next Question/ Quit/ Play again buttons need resizing. Some overlapping happening on smallest screen sizes.
 
+# Deployment
+
+This project was created using the code institute template.
+
+## Version Control
+
+This project was created using Visual Studio Code editor and pushed to 'milestone-project-2-sion-dawson', a remote repository in github.
+
+Throughout the project these commands were used to save work and push changes to github via the command line terminal.
+
+1. Type: git add .
+    + This command adds files to the staging area before committing.
+2. Type: git commit -m "a message goes in here explaining what chanes were made"
+    + This command commits changes to the local repository
+3. Type: git push
+    + This command commits all changes to the remote GitHub repository.
+
+
+## Deployment to github pages
+
+1. Navigate to this projects [github repository](https://github.com/siondawson/milestone-project-2/tree/main)
+2. Click 'settings' tab.
+3. Scroll down to the git hub pages heading.
+4. Select 'master branch' as the source.
+5. Click the save button.
+6. Click on the link to go to the live deployed page.
+
+## Clone the repository to your machine
+
+Navigate to the [github repository](https://github.com/siondawson/milestone-project-2/tree/main)
+
+1. Click on the code drop down button.
+2. Click HTTPS
+3. Copy repository link
+4. Open your IDE (git must be installed)
+5. Type git clone (copied git url) into the terminal.
+
+The project will now have been cloned on your machine.
+
+## Credits
+
+The code content of this software was created by Sion Dawson. 
+
+## Media 
+
+Images have been taken from various sources on google searches.
+
+## Acknowledgement
+
+Thankyou to my tutor Daisy McGirr for her help and guidance in this project. Thanks also to my wife Samantha (code institute alumni) for helping me overcome problems and discussing ideas.
+
+
 
 
 
