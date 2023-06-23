@@ -34,7 +34,8 @@ The project is a quiz based on Star Trek and is intented as a fun game for users
 #### As a frequent user, I want:
 
 1. To master the quiz.
-2. Get a perfect score.
+2. See if any new questions have been added.
+3. Get a perfect score.
 
 # Structure 
 
@@ -130,7 +131,51 @@ Extensive manual testing of Javascript functionality was carried out at all stag
 
 ## First time user stories: 
 
-1. To be able to understand 
+### High level tests against user stories
+
+#### First time user stories:
+
+1. To be able to easily understand the purpose of the site.
+    + All content displaus correctly on all screen sizes.
+2. To be able to play the quiz right away, without needing any instruction.
+    + Simple nav buttons and start quiz buttons allow user to begin the quiz without reading instructions on homepage. Quiz buttons use are obvious to first time user. 
+3. To test my knowledge about Star Trek.
+    + Quiz functions as expected. No technical barriers to user answering quiz questions exist.
+4. To know many many questions I got right.
+    + Score displays correctly after 10th question has been answered.
+5. To view the site on any device.
+    + Site tested from 300 - 3000px in google developer tools to ensure correct layout. Website also tested on many devices amongs immediate friends and family. 
+    + Extensive manual testing/ proof reading as questions were created to ensure 'correct' string matches the correct 'option' string.
+
+#### Returning user stories
+
+1. To play the quiz again. 
+    + Website tested to ensure a new array of questions formed and score reset to zero.
+2. To improve my score.
+    + When incorrect answers are selected, the user is not given the correct answer. They must rely on their knowlege alone!
+
+#### Frequent user stories
+
+1. To master the quiz.
+    + Ensure quiz functions perfectly. Leaving no chance for correct answer to be selected and 'incorrect' result being given.
+2. See if any new questions have been added. 
+    + Quiz built in a way where new questions can be added easily (with care and attention to detail) to question arrays.  
+2. Get a perfect score.
+    + Ensure quiz functions correctly. Ensure score is calculated correctly and displays correctly at the end of the quiz.
+
+## Issues found during testing 
+
+1. Score should increment by 1 for each correct answer. In project midpoint meeting my mentor identified issue where score would increment by 2 for each correct question after user clicked 'play again' button. This problem persisted into incrementing by 3 in the 3rd round. Issue remains in code. 
+
++ Issue bypassed by calling location.reload() on clicking 'play again' button. 
+
++ Result is user must click 'engage!' button again to play another round of the quiz. This does not adversely effect user experience.
+
+2. Questions checking answers against next question. Unsure why this was happening. Issue resolved by checking answer against previous index of array (questionNumber -1).
+
+3. Randomly applied answer button colors may duplicate and apply same color to more than one button. Does not effect functionality but flagged as detrimental to user experience. 
+
+4. Next Question/ Quit/ Play again buttons need resizing. Some overlapping happening on smallest screen sizes.
 
 
 
