@@ -56,6 +56,8 @@ A button allowing the user to quit the quiz to the homepage will be visible at a
 
 # Design
 
+This projects visual design is farily simple. The purpose of the project is to demonstrate understanding of Javascript therefore the bulk of the work went into the st-quiz.js file. 
+
 ## Appearence
 
 In order to present the user with an experience in keeping with the look and feel of Star Trek, I wanted the CSS to emulate the look of the computer panels in the show. In preperation for this project I disvered a CSS template to achieve this. This was modified for my own needs as is as presented in the project. 
@@ -84,4 +86,57 @@ Three questions each will be selected from easy, medium and hard questions. One 
 This approach will allow for quiz questions to be modfied, changed or expanded on without needing to modify the functionality of the quiz itself. 
 
 In any changes or new questions it must be ensured that the string 'correct' exactly matches the correct answer in the list of 'options' for the quiz to function correctly.   
+
+## Images
+
+Images we're pulled from various google searches. The starfleet badge image was taken from the above references github repository. 
+
+## Wireframes
+
+Wireframes can be foubd here.
+
+## Differences to design
+
+Wireframes show only most basic layout of the website needed to achieve intended functionality. 
+
+The CSS 'LCARS' look was implemented following creating the wireframes. 
+
+On beginning building the quiz, it quickly became evident that user experience would be greatly improved with some images to accompany each question. 
+
+'Engage Quiz' button was moved to quiz.html so that all Javascript functionality could be contain within one html file. 
+
+# Technologies 
+
+* HTML
+    + HTML was used to complete the structure of the website.
+* CSS 
+    + CSS was used to style the website.
+* Bootstrap 5
+    + Bootstrap 5 was used to responsively structure the website.
+* Javascript
+    + Javascript was used to display quiz questions and calculate the users score. 
+* Teachsini
+    + Used to create apple device mockup for readme.
+
+# Testing 
+
+This project is an interactive website. Testing will be performed on: 
+
+1. The websites visual appearance accross all screen sizes.
+2. Navigation buttons behave as expected.
+3. Javascript functionality.
+
+Extensive manual testing of Javascript functionality was carried out at all stages of development. 
+
+## First time user stories: 
+
+1. To be able to understand 
+
+
+
+
+
+
+
+
 
