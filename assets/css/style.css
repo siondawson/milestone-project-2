@@ -1,8 +1,3 @@
-/* @font-face {
-    font-family: "lcars";
-    src: url("/assets/lcars.woff") format("woff");
-  } */
-
 html {
     width: 100%;
     overflow-x: hidden;
@@ -21,27 +16,6 @@ body {
     font-style: ital;
 }
 
-#quiz-instructions {
-    
-}
-
-.answer-btn {
-    background: orange;
-    border-radius: 50px 50px 50px 50px;
-    box-shadow: none;
-    white-space: normal;
-    height: 50px;
-    width: 60%;
-    margin: 4px;
-    /* font-size: 120%; */
-    font-weight: lighter;
-
-}
-
-.answer-btn:hover {
-    opacity: 0.6;
-}
-
 .instructions-container {
     height: 100vh;
 }
@@ -54,7 +28,7 @@ body {
 
 /* LCARS PANELS */
 
-/* /* Panel styling taken from lcars style css theme https://github.com/frohoff/ctfd-trektheme.  */
+/* Panel styling taken from lcars style css theme https://github.com/frohoff/ctfd-trektheme.  */
 
 
 .container-lcars-top { 
@@ -65,7 +39,6 @@ body {
     border-width: 10px 50px 0px 50px;
     border-top-left-radius: 80px;
     border-top-right-radius: 80px;
-    /* position: relative; */
 }
 
 .container-lcars-left {
@@ -76,7 +49,7 @@ body {
     margin: 50px 0 50px 0;
     padding-bottom: 25px;
     padding-top: 25px !important;
-    /* position: relative; */
+   
 }
 
 .container-lcars-right {
@@ -87,7 +60,7 @@ body {
     margin: 50px 0 50px 0;
     padding-bottom: 25px;
     padding-top: 25px !important;
-    /* position: relative; */
+
 }
 
 .container-lcars-bottom {
@@ -97,10 +70,26 @@ body {
     border-width: 0px 50px 10px 50px;
     border-bottom-left-radius: 80px;
     border-bottom-right-radius: 80px; 
-    /* position: relative; */
+    
 }
 
 /* LCARS BUTTONS */
+
+.answer-btn {
+    background: orange;
+    border-radius: 50px 50px 50px 50px;
+    box-shadow: none;
+    white-space: normal;
+    height: 50px;
+    width: 60%;
+    margin: 4px;
+    
+
+}
+
+.answer-btn:hover {
+    opacity: 0.6;
+}
 
 .lcars-btn-orange {
     display: block;
@@ -110,6 +99,7 @@ body {
     height: 50px;
     width: 90px;
     margin: 0 auto;
+    margin-bottom: 5px;
     /* font-weight: lighter; */
     /* white-space: normal; */
   }
@@ -126,11 +116,26 @@ body {
     height: 50px;
     width: 90px;
     margin: 0 auto;
+    margin-bottom: 5px;
     /* font-weight: lighter; */
     /* white-space: normal; */
   }
 
+  .lcars-btn-red:hover {
+    opacity: 0.6;
+  }
+
   a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .lcars-btn-red a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .lcars-btn-orange a {
     text-decoration: none;
     color: #000;
   }
