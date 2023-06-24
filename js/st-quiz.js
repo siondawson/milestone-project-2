@@ -1,8 +1,5 @@
 let score = 0;
 let questionNumber = 0;
-// let index = 0;
-
-console.log(questionNumber);
 
 const buttonColors = ["#E95", "#97A", "#FC6", "#F90", "#C66", "#B62", "#F96", "#99F", "#B41", "#F93", "#D64", "#59F", "#C9C", "#9CF", "#CDF", "#BA5", "#FF9", "#C69", "#99C", "#C9C", "#FC6", "#A53"]
 
@@ -142,9 +139,11 @@ const bonusQuestions = [{
 
 ];
 
-let finalQuizQuestions = [];
+let finalQuizQuestions = []; // Empty Array ready for randomly selected questions
 
-/** https://forum.freecodecamp.org/t/how-to-make-math-random-not-repeat-same-numbers/417973/10 */
+/** Code from: https://forum.freecodecamp.org/t/how-to-make-math-random-not-repeat-same-numbers/417973/10 
+ * Function shuffles array into random order in preperation for first three to be selected in generateQuizQuestions().
+*/
 function shuffleArray(arr) {
     for (let i = arr.length -1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
@@ -154,46 +153,49 @@ function shuffleArray(arr) {
     
 }
 
+/** This function shuffles each question array, selects the first 3 items and pushes them to a new array. 
+ * Using this method as selecting from the arrays directly has possibility of same question appearing twice. 
+ * bonusQuestion array does not require shuffling as only one question is selected.
+ * New array (finalQuizQuestions) serves as the questions for the quiz */
 function generateQuizQuestions() {
     const randomQuizQuestions = [];
     
     let shuffledEasyQuestions = shuffleArray(easyQuestions).slice(0, 3);
-    console.log(shuffledEasyQuestions);
     randomQuizQuestions.push(shuffledEasyQuestions);
 
     let shuffledMediumQuestions = shuffleArray(mediumQuestions).slice(0, 3);
-    console.log(shuffledMediumQuestions);
     randomQuizQuestions.push(shuffledMediumQuestions);
 
     let shuffledHardQuestions = shuffleArray(hardQuestions).slice(0, 3);
-    console.log(shuffledHardQuestions);
     randomQuizQuestions.push(shuffledHardQuestions);
 
     let randomBonusQuestion = bonusQuestions[Math.floor(Math.random()*bonusQuestions.length)];
     randomQuizQuestions.push(randomBonusQuestion);
 
     let shuffledQuizQuestions = randomQuizQuestions.flat(Infinity);
-    console.log(shuffledQuizQuestions);
     finalQuizQuestions = shuffledQuizQuestions;
     return finalQuizQuestions;
 
 }
 
-window.onload = quizPrimed();
+
 
 /**
  * Disables answer buttons so answer buttons can not be selected until quiz begins. NOT WORKING
  */
-function quizPrimed() {
+// function quizPrimed() {
     
-    document.getElementsByClassName("answer-btn").disabled = true;
-    console.log("");
-}
+//     document.getElementsByClassName("answer-btn").disabled = true;
+
+// }
+
+// window.onload = quizPrimed();
 
 
 
 /**
- * Applies four different random colors from buttonColors array to answer buttons
+ * Applies four different random colors from buttonColors array to answer buttons. 
+ * Purely aesthetic function.
  */
 function randomColor() {
 
@@ -208,7 +210,6 @@ function randomColor() {
  * Changes color of unselected buttons back to orange once user has made selection.
  */
 function resetColors() {
-    console.log("resetting colors..");
     
     let answers = Array.from(document.querySelectorAll(".answer-btn"));
     console.log(answers);
@@ -222,7 +223,6 @@ function resetColors() {
 
 /** Disables click so user can't make another selection after selecting answer. */
 function disableAnswers() {
-    console.log("disabling click...");
     let answers = Array.from(document.querySelectorAll(".answer-btn"));
     console.log(answers);
     answers.forEach(answer => {
@@ -231,7 +231,6 @@ function disableAnswers() {
 };
 /** Enables click on answer buttons */
 function enableAnswers() {
-    console.log("enabling click...");
     let answers = Array.from(document.querySelectorAll(".answer-btn"));
     console.log(answers);
     answers.forEach(answer => {
@@ -255,11 +254,7 @@ function enableNextBtn() {
  * Increments question number to 1.
  */
 function startQuiz() {
-    console.log(finalQuizQuestions);
     score = 0;
-    // questionNumber = 0;
-    console.log("starting quiz");
-    console.log(questionNumber);
     let questionCounter = document.getElementById('question-number');
     let question = document.getElementById('question');
     let image = document.getElementById('question-img');
@@ -267,7 +262,6 @@ function startQuiz() {
     playAgainBtn.classList.add("hidden");
 
     generateQuizQuestions();
-    console.log(finalQuizQuestions);
 
     disableNextBtn();
     
@@ -304,58 +298,47 @@ function startQuiz() {
  * Adds click event listener to answer buttons. 
  * Checks if answer is correct. 
  * Turns answer green if correct.
- * Turns answeer red if incorrect.
+ * Turns answer red if incorrect.
  * Calls nextQuestion function.
  */
 
 function checkAnswer() {
     let answerSection = document.getElementById("answer-section");
     answerSection.classList.remove("hidden");
-    console.log("checking question");
-    console.log(questionNumber);
     let answers = Array.from(document.querySelectorAll(".answer-btn"));
-
     let nextButton = document.getElementById("next-question-btn");
     
     answers.forEach(answer => {
         answer.addEventListener("click", () => {
             enableNextBtn();
-            let i = questionNumber - 1;
+            let i = questionNumber - 1; // Bug fix. Stops quiz comparing answers of current question against answers of next question in the array.
             
             let correct = finalQuizQuestions[i].correct;
-            console.log(correct);
             answer.classList.add("user-answer");
             let userAnswer = document.getElementsByClassName("user-answer").item(0);
-            console.log(userAnswer);
+           
             let result = userAnswer.innerHTML;
-            console.log(result);
-            console.log(correct);
 
-            if (result === correct) {
-                console.log("correct");
-                console.log(userAnswer);
+            if (result === correct) { // If answer is selected button turns green and score increments by 1.
                 userAnswer.classList.add("turn-green");
                 score++;
-            } else if (result != correct) {
-                console.log("incorrect");
+            } else if (result != correct) { // If answer is not correct button turns red.
                 userAnswer.classList.add("turn-red");
             } 
-            resetColors();
-            disableAnswers();
+            resetColors(); // other buttons turn orange.
+            disableAnswers(); // stops another answer from being selected.
         
         })
     });
 
     let engageButton = document.getElementById("first-question-btn");
-    engageButton.classList.add("hidden");
+    engageButton.classList.add("hidden"); // hides button that starts quiz. (engage).
 
-    nextButton.classList.remove("hidden");
+    nextButton.classList.remove("hidden"); // shows next question button.
 
-    console.log("score is " + score);
 };
 
 function nextQuestion() {
-    console.log("Next Question!");
     let question = document.getElementById("question");
     let image = document.getElementById('question-img');
     let answers = document.getElementsByClassName("answer-btn");
@@ -364,15 +347,10 @@ function nextQuestion() {
     randomColor();
     disableNextBtn();
 
-    console.log(finalQuizQuestions.length);
-    console.log(finalQuizQuestions[0][questionNumber]);
-    console.log(questionNumber)
-
-
     if (questionNumber < finalQuizQuestions.length) {
-        console.log(answers);
         
-        for (answer of answers) { //removes selection classes
+        
+        for (answer of answers) { // removes user selection classes from previous question.
             answer.classList.remove(
                 "turn-green",
                 "turn-red",
@@ -380,9 +358,6 @@ function nextQuestion() {
             );
         }
         
-        console.log("classes removed");
-       
-        console.log("disabling next btn..")
         question.innerHTML = finalQuizQuestions[questionNumber].question;
         image.innerHTML = finalQuizQuestions[questionNumber].image;
     
@@ -390,9 +365,9 @@ function nextQuestion() {
             answers[i].innerText = finalQuizQuestions[questionNumber].options[i];
         }
     
-        questionCounter.innerHTML = `Question ${questionNumber + 1}`;
+        questionCounter.innerHTML = `Question ${questionNumber + 1}`; // shows user which question they are on.
         questionNumber++;
-    } else {
+    } else { // if we are at the end of the array: hide next question button and call showResult() function.
         let nextButton = document.getElementById("next-question-btn");
         nextButton.classList.add("hidden");
         showResult();
