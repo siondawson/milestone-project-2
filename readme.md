@@ -139,6 +139,8 @@ This project is an interactive website. Testing will be performed on:
 
 Extensive manual testing of Javascript functionality was carried out at all stages of development. 
 
+[Full testing can be found here](assets/testing/star-trek-quiz-testing.pdf)
+
 ## First time user stories: 
 
 ### High level tests against user stories
