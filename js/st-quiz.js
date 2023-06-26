@@ -67,7 +67,7 @@ const mediumQuestions = [{
 },
 {
     question: '"Cry "Havok!" and let slip the dogs of war" is a quote from which Shakespeare play?',
-    image: `<img src="assets/images/cry-havok.gif" id="question-img">`,
+    image: `<img src="assets/images/cry-havok.gif" id="question-img">`, // https://makeagif.com/gif/star-trek-vi-the-undiscovered-country-cry-havoc-IFdo1g
     options: ["Richard III", "Macbeth", "Julius Caesar", "The Tempest"],
     correct: "Julius Caesar"
 },
