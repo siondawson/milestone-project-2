@@ -94,17 +94,23 @@ Images we're pulled from various google searches. The starfleet badge image was 
 
 ## Wireframes
 
-Wireframes can be foubd here.
+![Homepage wireframe mobile](assets/wireframes/star-trek-quiz-home-page-mobile.png)
+![Homepage wireframe desktop](assets/wireframes/star-trek-quiz-home-desktop.png)
+![Quiz wireframe mobile](assets/wireframes/star-trek-quiz-quiz-mobile.png)
+![Quiz wireframe desktop](assets/wireframes/star-trek-quiz-quiz-desktop.png)
+
 
 ## Differences to design
 
-Wireframes show only most basic layout of the website needed to achieve intended functionality. 
+* Wireframes show only most basic layout of the website needed to achieve intended functionality. 
 
-The CSS 'LCARS' look was implemented following creating the wireframes. 
+* The CSS 'LCARS' look was implemented following creating the wireframes. 
 
-On beginning building the quiz, it quickly became evident that user experience would be greatly improved with some images to accompany each question. 
+* On beginning building the quiz, it quickly became evident that user experience would be greatly improved with some images to accompany each question. 
 
-'Engage Quiz' button was moved to quiz.html so that all Javascript functionality could be contain within one html file. 
+* 'Engage Quiz' button was moved to quiz.html so that all Javascript functionality is contained to quiz.html. 
+
+* Custom 404 error page - added on advice of my mentor. No wireframes needed for this. CSS styling allready in place.
 
 # Technologies 
 
@@ -116,7 +122,7 @@ On beginning building the quiz, it quickly became evident that user experience w
     + Bootstrap 5 was used to responsively structure the website.
 * Javascript
     + Javascript was used to display quiz questions and calculate the users score. 
-* Teachsini
+* Techsini
     + Used to create apple device mockup for readme.
 
 # Testing 

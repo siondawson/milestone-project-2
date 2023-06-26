@@ -38,6 +38,12 @@ const easyQuestions = [{
     image: `<img src="assets/images/spock.jpeg" id="question-img">`,
     options: ["Borg", "Human", "Klingon", "Andorian"],
     correct: "Human"
+},
+{
+    question: "This is the Enterprise ...?",
+    image: `<img src="assets/images/enterprise-d.jpeg" id="question-img">`, // https://www.pxfuel.com/en/query?q=enterprise+d
+    options: ["A", "B", "D", "E"],
+    correct: "D"
 }
 ];
 
