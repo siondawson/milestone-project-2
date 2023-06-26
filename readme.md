@@ -110,6 +110,8 @@ Images we're pulled from various google searches. The starfleet badge image was 
 
 * 'Engage Quiz' button was moved to quiz.html so that all Javascript functionality is contained to quiz.html. 
 
+* As 'Engage Quiz' button was moved to quiz.html placeholder text was added to question and buttons prompting user to click 'engage quiz' button.
+
 * Custom 404 error page - added on advice of my mentor. No wireframes needed for this. CSS styling allready in place.
 
 # Technologies 
@@ -228,7 +230,9 @@ The code content of this software was created by Sion Dawson.
 
 ## Media 
 
-Images have been taken from various sources on google searches.
+Question images have been taken from various sources on google searches. Links to images sources have been included in st-quiz.js as inline comments next to image properties in question arrays.
+
+Starfleet insignia image was included in allready referenced [github repoistory](https://github.com/frohoff/ctfd-trektheme) on creating lcars style css theme. 
 
 ## Acknowledgement
 
