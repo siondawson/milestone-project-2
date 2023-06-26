@@ -178,21 +178,6 @@ function generateQuizQuestions() {
 
 }
 
-
-
-/**
- * Disables answer buttons so answer buttons can not be selected until quiz begins. NOT WORKING
- */
-// function quizPrimed() {
-    
-//     document.getElementsByClassName("answer-btn").disabled = true;
-
-// }
-
-// window.onload = quizPrimed();
-
-
-
 /**
  * Applies four different random colors from buttonColors array to answer buttons. 
  * Purely aesthetic function.
@@ -340,7 +325,7 @@ function checkAnswer() {
 
     nextButton.classList.remove("hidden"); // shows next question button.
 
-};
+}
 
 /** Event listener applied to next question button. Calls nextQuestion(). */
 let nextQuestionBtn = document.getElementById("next-question-btn");
