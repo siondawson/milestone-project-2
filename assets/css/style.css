@@ -105,6 +105,10 @@ body {
     margin-bottom: 5px;
     color: #000;
   }
+
+  .black-text $el.x-text .tel span a {
+    color: #000000 !important;
+}
   
   .lcars-btn-orange:hover {
     opacity: 0.6;

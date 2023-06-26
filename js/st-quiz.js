@@ -190,10 +190,17 @@ function generateQuizQuestions() {
  */
 function randomColor() {
 
+    let shuffledButtonColors = [];
+
+    let shuffledColors = shuffleArray(buttonColors).slice(0, 4);
+    shuffledButtonColors.push(shuffledColors);
+    
+    let fourRandomColors = shuffledButtonColors;
+
     for (let i = 0; i < 4; i++) {
+        let buttonColor = fourRandomColors.flat(Infinity);
         let answers = Array.from(document.querySelectorAll(".answer-btn"));
-        let randomColor = Math.floor(Math.random() * buttonColors.length);
-        answers[i].style.background = buttonColors[randomColor];
+        answers[i].style.background = buttonColor[i];
     }
 
 }
@@ -203,7 +210,6 @@ function randomColor() {
 function resetColors() {
     
     let answers = Array.from(document.querySelectorAll(".answer-btn"));
-    console.log(answers);
     answers.forEach(answer => {
         if (! answer.classList.contains("user-answer")) {
             answer.style.backgroundColor = "orange";
@@ -215,7 +221,6 @@ function resetColors() {
 /** Disables click so user can't make another selection after selecting answer. */
 function disableAnswers() {
     let answers = Array.from(document.querySelectorAll(".answer-btn"));
-    console.log(answers);
     answers.forEach(answer => {
         answer.style.pointerEvents = 'none';
     });
