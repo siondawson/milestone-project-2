@@ -10,7 +10,7 @@ const easyQuestions = [{
     correct: "USS Enterprise"
 },
 {
-    question: "What is the name of these aliens?",
+    question: "What are these aliens called?",
     image: `<img src="assets/images/tribbles.jpeg" id="question-img" alt="Image of Kirk with furry aliens">`, // https://en.wikipedia.org/wiki/The_Trouble_with_Tribbles
     options: ["Vulcans", "Klingons", "Shatners", "Tribbles"],
     correct: "Tribbles"
