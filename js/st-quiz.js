@@ -6,36 +6,36 @@ const buttonColors = ["#E95", "#97A", "#FC6", "#F90", "#C66", "#B62", "#F96", "#
 const easyQuestions = [{
     question: "What ship does Kirk command?",
     image: `<img src="assets/images/kirk-img.jpeg" id="question-img">`,
-    options: ["SS Botany Bay", "USS Enterprise", "USS Voyager", "USS Constellation"],
+    options: ["SS Botany Bay", "USS Enterprise", "USS Voyager", "USS Constellation"], // https://www.writeups.org/captain-kirk-star-trek-william-shatner/
     correct: "USS Enterprise"
 },
 {
     question: "What is the name of these aliens?",
-    image: `<img src="assets/images/tribbles.jpeg" id="question-img">`,
+    image: `<img src="assets/images/tribbles.jpeg" id="question-img">`, // https://en.wikipedia.org/wiki/The_Trouble_with_Tribbles
     options: ["Vulcans", "Klingons", "Shatners", "Tribbles"],
     correct: "Tribbles"
 },
 {
     question: '"Bones" is the nickname of which character?',
-    image: `<img src="assets/images/st-tos-cast.jpeg" id="question-img">`,
+    image: `<img src="assets/images/st-tos-cast.jpeg" id="question-img">`, // https://en.wikipedia.org/wiki/Star_Trek:_The_Original_Series
     options: ["Spock", "Captain Picard", "Dr. McCoy", "Dr. Crusher"],
     correct: "Dr. McCoy"
 },
 {
     question: "How many years will their mission last?",
-    image: `<img src="assets/images/enterprise.jpeg" id="question-img">`,
+    image: `<img src="assets/images/enterprise.jpeg" id="question-img">`, // https://memory-alpha.fandom.com/wiki/USS_Enterprise_(NCC-1701)
     options: ["5", "1", "7", "9"],
     correct: "5"
 },
 {
     question: "Who was captain of the Enterprise before Kirk?",
-    image: `<img src="assets/images/enterprise.jpeg" id="question-img">`,
+    image: `<img src="assets/images/enterprise.jpeg" id="question-img">`, // https://memory-alpha.fandom.com/wiki/USS_Enterprise_(NCC-1701)
     options: ["Spock", "Janeway", "Picard", "Pike"],
     correct: "Pike"
 },
 {
     question: "Spock is half Vulcan and half ...?",
-    image: `<img src="assets/images/spock.jpeg" id="question-img">`,
+    image: `<img src="assets/images/spock.jpeg" id="question-img">`, // https://intl.startrek.com/database_article/spock
     options: ["Borg", "Human", "Klingon", "Andorian"],
     correct: "Human"
 },
@@ -48,20 +48,20 @@ const easyQuestions = [{
 ];
 
 const mediumQuestions = [{
-    question: "In the origianl series, What usually happens to minor characters wearing red uniforms?",
-    image: `<img src="assets/images/redshirt.jpeg" id="question-img">`,
+    question: "In the original series, What usually happens to minor characters wearing red uniforms?",
+    image: `<img src="assets/images/redshirt.jpeg" id="question-img">`, // https://www.google.com/search?sxsrf=APwXEdd6k5KBv33UWZocQnzdtJpoU5eG4A:1687789504010&q=star+trek+red+shirt&tbm=isch&sa=X&ved=2ahUKEwjf5d3ukeH_AhXRg_0HHS2KD-oQ0pQJegQICxAB&biw=2006&bih=1160&dpr=2#imgrc=BM67XiAP_cxjUM
     options: ["They die", "Get promoted", "Operate the tricorder", "Save the main cast"],
     correct: "They die"
 },
 {
     question: '"The Doctor" in Voyager is a ...?',
-    image: `<img src="assets/images/the-doctor.jpeg" id="question-img">`,
+    image: `<img src="assets/images/the-doctor.jpeg" id="question-img">`, // https://memory-alpha.fandom.com/wiki/The_Doctor
     options: ["Human", "Robot", "Hologram", "Android"],
     correct: "Hologram"
 },
 {
     question: "Data has a cat, what is his name?",
-    image: `<img src="assets/images/data-spot.jpeg" id="question-img">`,
+    image: `<img src="assets/images/data-spot.jpeg" id="question-img">`, // https://www.tor.com/2013/01/29/star-trek-the-next-generation-force-of-nature/
     options: ["Tyler", "Spot", "Bud", "Monster"],
     correct: "Spot"
 },
@@ -73,13 +73,13 @@ const mediumQuestions = [{
 },
 {
     question: "Which classic novel does Kahn reference with his final line 'from hell's heart I stab at thee, for hate's sake I spit my last breath at thee.'?",
-    image: `<img src="assets/images/from-hells-heart.jpeg" id="question-img">`,
+    image: `<img src="assets/images/from-hells-heart.jpeg" id="question-img">`, // https://twitter.com/amergina/status/1125240067642011648
     options: ["To Kill a Mockingbird", "Moby Dick", "Catch-22", "Ninteen Eighty-Four"],
     correct: "Moby Dick"
 },
 {
     question: "'Second star to the right and straight on 'til morning.' is a quote from?",
-    image: `<img src="assets/images/second-star.jpeg" id="question-img">`,
+    image: `<img src="assets/images/second-star.jpeg" id="question-img">`, // https://www.google.com/search?sxsrf=APwXEdd3JglTMx9Qxr8fnLcSG_jp9Knhrg:1687789800461&q=star+trek+second+start+to+the+right&tbm=isch&sa=X&ved=2ahUKEwjL8ov8kuH_AhVj_rsIHadHCMgQ0pQJegQIChAB&biw=2006&bih=1160&dpr=2#imgrc=2PGSXLhNkSRixM
     options: ["Peter Pan", "Alice in Wonderland", "The Wizard of Oz", "Snow White"],
     correct: "Peter Pan"
 }
@@ -87,13 +87,13 @@ const mediumQuestions = [{
 
 const hardQuestions = [{
     question: "What were The Borg originally conceptualised as being?",
-    image: `<img src="assets/images/the-borg.jpeg" id="question-img">`,
+    image: `<img src="assets/images/the-borg.jpeg" id="question-img">`, // https://www.giantfreakinrobot.com/cltr/borg-drink-college-tiktok.html
     options: ["Androids", "Insects", "Humanoids", "Cyborgs"],
     correct: "Insects"
 },
 {
     question: "Who talked Nichelle Nicholls out of leaving TOS?",
-    image: `<img src="assets/images/nichelle-nichols.jpeg" id="question-img">`,
+    image: `<img src="assets/images/nichelle-nichols.jpeg" id="question-img">`, // https://www.latimes.com/entertainment-arts/tv/story/2022-08-01/nichelle-nichols-star-trek-uhura-appreciation
     options: ["Malcolm X", "Gene Roddenberry", "Rosa Parks", "Martin Luther King Jr."],
     correct: "Martin Luther King Jr."
 },
