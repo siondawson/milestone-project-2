@@ -248,8 +248,8 @@ function enableNextBtn() {
     nextButton.style.pointerEvents = "auto";
 }
 
-
-let engageBtn = document.getElementById("first-question-btn"); // startQuiz called here. Event listener applied to 'engage!' button.
+/** startQuiz called here. Event listener applied to 'engage!' button. */
+let engageBtn = document.getElementById("first-question-btn");
 engageBtn.addEventListener("click", () => {
     startQuiz();
 });
@@ -283,20 +283,18 @@ function startQuiz() {
         );
     }
     
-    question.innerHTML = finalQuizQuestions[questionNumber].question;
-    questionCounter.innerHTML = `Question ${questionNumber + 1}`;
+    question.innerHTML = finalQuizQuestions[questionNumber].question; // populates question
+    questionCounter.innerHTML = `Question ${questionNumber + 1}`; // increments question counter from 0 to 1.
 
-    image.classList.remove('hidden');
-    image.innerHTML = finalQuizQuestions[questionNumber].image;
+    image.classList.remove('hidden'); // unhides image div.
+    image.innerHTML = finalQuizQuestions[questionNumber].image; // populates image div.
 
-    for (let i = 0;i < 4; i++) {
+    for (let i = 0;i < 4; i++) { // populates answer buttons. 
         answers[i].innerText = finalQuizQuestions[questionNumber].options[i];
     }
 
     randomColor();
-
-    questionNumber++;
-    console.log(questionNumber);
+    questionNumber++; // increments question number by 1.
     checkAnswer();
 };
 
@@ -344,6 +342,7 @@ function checkAnswer() {
 
 };
 
+/** Event listener applied to next question button. Calls nextQuestion(). */
 let nextQuestionBtn = document.getElementById("next-question-btn");
 nextQuestionBtn.addEventListener("click", () => {
     nextQuestion();
@@ -397,13 +396,13 @@ function nextQuestion() {
  */
 function showResult() {
     let answerSection = document.getElementById("answer-section");
-    answerSection.classList.add("hidden");
+    answerSection.classList.add("hidden"); // hides answer section
     let resultSection = document.getElementById("question-number");
-    resultSection.innerHTML = `You Scored ${score} out of 10`;
+    resultSection.innerHTML = `You Scored ${score} out of 10`; // shows users score 
     let question = document.getElementById("question");
     question.innerHTML = "Thanks for playing!";
     let playAgainBtn = document.getElementById("play-again-btn");
-    playAgainBtn.classList.remove("hidden");
+    playAgainBtn.classList.remove("hidden"); // shows play again button. 
     
     if (finalQuizQuestions.length === 10) {
         questionNumber = 0;
