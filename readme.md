@@ -126,6 +126,8 @@ Images we're pulled from various google searches. The starfleet badge image was 
     + Javascript was used to display quiz questions and calculate the users score. 
 * Techsini
     + Used to create apple device mockup for readme.
++ favicon.io
+    + Used to create multi device mockup for this readme.
 
 # Testing 
 
