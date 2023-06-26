@@ -191,6 +191,8 @@ Extensive manual testing of Javascript functionality was carried out at all stag
     + issue reslolved with resizing and bootstap classes.
 5. A person who tested the site reported that lcars-esque numbers on answer buttons before user clicks 'engage!' were confusing. 
     + numbers replaced with 'awaiting command...'. Less confusing. More prompts for user to start the quiz. 
+6. Questions and button text showing as blue on iphone safari browsers
+    + .black-text class added to css with code from cited source.
 
 # Deployment
 
