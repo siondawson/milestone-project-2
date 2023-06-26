@@ -111,7 +111,7 @@ const hardQuestions = [{
 },
 {
     question: 'Who became known as the "unknown shakesperian actor"?',
-    image: `<img src="assets/images/shakespeare.jpeg" id="question-img" alt="Image of starfleet insignia">`,
+    image: `<img src="assets/images/shakespeare.jpeg" id="question-img" alt="Image of Shakespere as a Klingon">`, // https://www.cracked.com/article_30586_wait-william-shakespeare-was-a-klingon.html
     options: ["William Shatner", "Christopher Plummer", "Avery Brooks", "Patrick Stewart"],
     correct: "Patrick Stewart"
 },
