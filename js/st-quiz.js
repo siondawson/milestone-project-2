@@ -248,11 +248,18 @@ function enableNextBtn() {
     nextButton.style.pointerEvents = "auto";
 }
 
+
+let engageBtn = document.getElementById("first-question-btn"); // startQuiz called here. Event listener applied to 'engage!' button.
+engageBtn.addEventListener("click", () => {
+    startQuiz();
+});
+
+
 /**
  * Resets score to 0, populates first question image and answers. 
  * Random color applied from buttonColors array.
  * Increments question number to 1.
- * calls checkAnswer()
+ * calls checkAnswer().
  */
 function startQuiz() {
     score = 0;
