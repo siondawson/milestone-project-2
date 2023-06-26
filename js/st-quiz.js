@@ -344,6 +344,11 @@ function checkAnswer() {
 
 };
 
+let nextQuestionBtn = document.getElementById("next-question-btn");
+nextQuestionBtn.addEventListener("click", () => {
+    nextQuestion();
+});
+
 /**
  * Removes correct/ incorrect/ user-answer classes from previous question. 
  * Calls next question in finalQuizQuestions array.
