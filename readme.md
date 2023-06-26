@@ -181,11 +181,16 @@ Extensive manual testing of Javascript functionality was carried out at all stag
 
 + Result is user must click 'engage!' button again to play another round of the quiz. This does not adversely effect user experience.
 
-2. Questions checking answers against next question. Unsure why this was happening. Issue resolved by checking answer against previous index of array (questionNumber -1).
+2. Questions checking answers against next question. Unsure why this was happening. 
+    + Issue resolved by checking answer against previous index of array (questionNumber -1).
 
 3. Randomly applied answer button colors may duplicate and apply same color to more than one button. Does not effect functionality but flagged as detrimental to user experience. 
+    + Issue fixed by shuffling colors array and selecting only the first four.
 
 4. Next Question/ Quit/ Play again buttons need resizing. Some overlapping happening on smallest screen sizes.
+    + issue reslolved with resizing and bootstap classes.
+5. A person who tested the site reported that lcars-esque numbers on answer buttons before user clicks 'engage!' were confusing. 
+    + numbers replaced with 'awaiting command...'. Less confusing. More prompts for user to start the quiz. 
 
 # Deployment
 
