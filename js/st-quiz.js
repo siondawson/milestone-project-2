@@ -249,9 +249,10 @@ function enableNextBtn() {
 }
 
 /**
- * Resets score to 0, populates question image and answers. 
+ * Resets score to 0, populates first question image and answers. 
  * Random color applied from buttonColors array.
  * Increments question number to 1.
+ * calls checkAnswer()
  */
 function startQuiz() {
     score = 0;
@@ -267,7 +268,7 @@ function startQuiz() {
     
     let answers = Array.from(document.querySelectorAll(".answer-btn"));
 
-    for (answer of answers) {
+    for (let answer of answers) { // removes user answer selection classes from previous round
         answer.classList.remove(
             "turn-green",
             "turn-red",
@@ -282,7 +283,6 @@ function startQuiz() {
     image.innerHTML = finalQuizQuestions[questionNumber].image;
 
     for (let i = 0;i < 4; i++) {
-        console.log(finalQuizQuestions[questionNumber].options[i] )
         answers[i].innerText = finalQuizQuestions[questionNumber].options[i];
     }
 
@@ -301,7 +301,6 @@ function startQuiz() {
  * Turns answer red if incorrect.
  * Calls nextQuestion function.
  */
-
 function checkAnswer() {
     let answerSection = document.getElementById("answer-section");
     answerSection.classList.remove("hidden");
@@ -314,7 +313,7 @@ function checkAnswer() {
             let i = questionNumber - 1; // Bug fix. Stops quiz comparing answers of current question against answers of next question in the array.
             
             let correct = finalQuizQuestions[i].correct;
-            answer.classList.add("user-answer");
+            answer.classList.add("user-answer"); // when user selects an answer, class of user-answer is applied to that button.
             let userAnswer = document.getElementsByClassName("user-answer").item(0);
            
             let result = userAnswer.innerHTML;
@@ -338,6 +337,11 @@ function checkAnswer() {
 
 };
 
+/**
+ * Removes correct/ incorrect/ user-answer classes from previous question. 
+ * Calls next question in finalQuizQuestions array.
+ * If at the end of the array showResult() is called. 
+ */
 function nextQuestion() {
     let question = document.getElementById("question");
     let image = document.getElementById('question-img');
@@ -350,7 +354,7 @@ function nextQuestion() {
     if (questionNumber < finalQuizQuestions.length) {
         
         
-        for (answer of answers) { // removes user selection classes from previous question.
+        for (answer of answers) { // removes user selection classes on answer buttons from previous question.
             answer.classList.remove(
                 "turn-green",
                 "turn-red",
@@ -361,19 +365,24 @@ function nextQuestion() {
         question.innerHTML = finalQuizQuestions[questionNumber].question;
         image.innerHTML = finalQuizQuestions[questionNumber].image;
     
-        for (let i = 0;i < 4; i++) {
+        for (let i = 0;i < 4; i++) { // populates answer buttons with options.
             answers[i].innerText = finalQuizQuestions[questionNumber].options[i];
         }
     
-        questionCounter.innerHTML = `Question ${questionNumber + 1}`; // shows user which question they are on.
+        questionCounter.innerHTML = `Question ${questionNumber + 1}`; // increments question numner so user knows which question they are on.
         questionNumber++;
-    } else { // if we are at the end of the array: hide next question button and call showResult() function.
+    } else { // if we are at the end of the array (last question): hide next question button and call showResult() function.
         let nextButton = document.getElementById("next-question-btn");
         nextButton.classList.add("hidden");
         showResult();
     }
 }
 
+/**
+ * Displays users score. 
+ * Hides answer buttons and next question button.
+ * Shows play again button.
+ */
 function showResult() {
     let answerSection = document.getElementById("answer-section");
     answerSection.classList.add("hidden");
@@ -383,13 +392,10 @@ function showResult() {
     question.innerHTML = "Thanks for playing!";
     let playAgainBtn = document.getElementById("play-again-btn");
     playAgainBtn.classList.remove("hidden");
-    console.log("arrray length" + finalQuizQuestions.length);
     
     if (finalQuizQuestions.length === 10) {
         questionNumber = 0;
-        score = 0;
-        console.log("score is " + score);
-        console.log(finalQuizQuestions);
+        score = 0; // issue with score resetting/ duplicating on next round unresolved. Issue currently bypassed by calling location.reload() on play again button.  
         generateQuizQuestions();
     }
 }
