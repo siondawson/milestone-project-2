@@ -8,7 +8,7 @@ The live website can be found [here](https://siondawson.github.io/milestone-proj
 
 ## Star Trek Quiz Responsive Website
 
-(TECHSINI IMG HERE)
+![Multi-device mockup](assets/images/star-trek-quiz-mockup.png)
 
 The project is a quiz based on Star Trek and is intented as a fun game for users. Users will be presented with a series of ten question, each with four possible answer to choose from. 
 
