@@ -217,9 +217,9 @@ function resetColors() {
         if (! answer.classList.contains("user-answer")) {
             answer.style.backgroundColor = "orange";
         }
-    })
-    
-};
+    });
+
+}
 
 /** Disables click so user can't make another selection after selecting answer. */
 function disableAnswers() {
@@ -227,8 +227,8 @@ function disableAnswers() {
     console.log(answers);
     answers.forEach(answer => {
         answer.style.pointerEvents = 'none';
-    })
-};
+    });
+}
 /** Enables click on answer buttons */
 function enableAnswers() {
     let answers = Array.from(document.querySelectorAll(".answer-btn"));
@@ -296,7 +296,7 @@ function startQuiz() {
     randomColor();
     questionNumber++; // increments question number by 1.
     checkAnswer();
-};
+}
 
 
 /**
@@ -332,7 +332,7 @@ function checkAnswer() {
             resetColors(); // other buttons turn orange.
             disableAnswers(); // stops another answer from being selected.
         
-        })
+        });
     });
 
     let engageButton = document.getElementById("first-question-btn");
@@ -365,7 +365,7 @@ function nextQuestion() {
     if (questionNumber < finalQuizQuestions.length) {
         
         
-        for (answer of answers) { // removes user selection classes on answer buttons from previous question.
+        for (var answer of answers) { // removes user selection classes on answer buttons from previous question.
             answer.classList.remove(
                 "turn-green",
                 "turn-red",
