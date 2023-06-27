@@ -13,11 +13,10 @@ body {
 
 #quiz-tite {
     font-family: 'Kanit', sans-serif;
-    font-style: ital;
 }
 
 .instructions-container {
-    height: 100vh;
+    
 }
 
 #starfleet-badge {
@@ -34,30 +33,30 @@ body {
 .container-lcars-top { 
     border-color: #97A;
     border-style: solid;
-    border-width: 10px 50px 0 50px;
     border-top-left-radius: 80px;
     border-top-right-radius: 80px;
-    padding: 15px 30px;
+    border-width: 10px 50px 0 50px;
     margin-top: 10px;
+    padding: 15px 30px;
     
 }
 
 .container-lcars-left {
-    border-style: solid;
     border-color: #FC6;
-    border-width: 7px 0px 7px 40px;
-    border-radius: 60px 0px 0px 60px / 30px !important;
+    border-style: solid;
+    border-radius: 60px 0 0 60px / 30px !important;
+    border-width: 7px 0 7px 40px;
     margin: 50px 0 50px 0;
     padding-bottom: 25px;
     padding-top: 25px !important;
-   
+    
 }
 
 .container-lcars-right {
-    border-style: solid;
     border-color: #FC6;
-    border-width: 7px 40px 7px 0px;
-    border-radius: 00px 60px 60px 0px / 30px !important;
+    border-style: solid;
+    border-radius: 0 60px 60px 0 / 30px !important;
+    border-width: 7px 40px 7px 0;
     margin: 50px 0 50px 0;
     padding-bottom: 25px;
     padding-top: 25px !important;
@@ -65,29 +64,31 @@ body {
 }
 
 .container-lcars-bottom {
-    padding: 15px 30px;
     border-style: solid;
     border-color: #E95;
-    border-width: 0px 50px 10px 50px;
+    border-width: 0 50px 10px 50px;
     border-bottom-left-radius: 80px;
     border-bottom-right-radius: 80px; 
     margin-bottom: 10px;
-    
+    padding: 15px 30px;
+
 }
 
 /* LCARS BUTTONS */
+
+button {
+    border: none;
+}
 
 .answer-btn {
     background: orange;
     border-radius: 50px 50px 50px 50px;
     box-shadow: none;
-    white-space: normal;
-    height: 50px;
-    width: 60%;
-    margin: 4px;
     color: #000;
-    
-    
+    height: 50px;
+    margin: 4px;
+    white-space: normal;
+    width: 60%;
 
 }
 
@@ -96,15 +97,20 @@ body {
 }
 
 .lcars-btn-orange {
-    display: block;
+    
     background: orange;
     border-radius: 50px 50px 50px 50px;
     box-shadow: none;
+    color: #000;
+    display: flex;
     height: 50px;
-    width: 100px;
     margin: 0 auto;
     margin-bottom: 5px;
-    color: #000;
+    width: 100px;
+    
+    justify-content: center;
+    align-items: center;
+
   }
 /* This code fixes issue with button text appearing blue on iphone safari. Code found online work lost after codeanwhere crashed. Now cant find the link again! */
   .black-text el.x-text .tel span a { 
@@ -116,15 +122,18 @@ body {
   }
 
   .lcars-btn-red {
-    display: block;
+    
     background: red;
     border-radius: 50px 50px 50px 50px;
     box-shadow: none;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 50px;
-    width: 90px;
     margin: 0 auto;
     margin-bottom: 5px;
-    color: #000;
+    width: 90px;
   }
 
   .lcars-btn-red:hover {
@@ -132,36 +141,34 @@ body {
   }
 
   a {
-    text-decoration: none;
     color: #000;
+    text-decoration: none;
   }
 
   .lcars-btn-red a {
-    text-decoration: none;
     color: #000;
+    text-decoration: none;
   }
 
   .lcars-btn-orange a {
-    text-decoration: none;
     color: #000;
+    text-decoration: none;
   }
 
-  .hidden {
-    display: none;
-  }
+/* QUIZ IMAGE */
 
   #question-img {
-    
-    max-width: 100%;
-    max-height: 100%;
     display: block;
     margin: 0 auto;
-
+    max-width: 100%;
+    max-height: 100%;
   }
 
   .array-img {
     width: 250px;
   }
+
+/* QUIZ JS APPLIED FUNCTIONAL CLASSES */
 
   .user-answer {
 
@@ -173,4 +180,8 @@ body {
 
   .turn-red {
     background: #ff1414 !important;
+  }
+
+  .hidden {
+    display: none;
   }

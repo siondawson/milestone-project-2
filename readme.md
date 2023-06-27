@@ -61,7 +61,7 @@ This projects visual design is farily simple. The purpose of the project is to d
 
 ## Appearence
 
-In order to present the user with an experience in keeping with the look and feel of Star Trek, I wanted the CSS to emulate the look of the computer panels in the show. In preperation for this project I disvered a CSS template to achieve this. This was modified for my own needs as is as presented in the project. 
+In order to present the user with an experience in keeping with the look and feel of Star Trek, I wanted the CSS to emulate the look of the computer panels in the show. In preperation for this project I discovered a CSS template to achieve this. This was modified for my own needs as is as presented in the project. 
 
 ## Color scheme 
 
@@ -138,6 +138,12 @@ This project is an interactive website. Testing will be performed on:
 3. Javascript functionality.
 
 Extensive manual testing of Javascript functionality was carried out at all stages of development. 
+
+Website accessibility checked with [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) and showed no erros. 
+
+HTML ran through [validator](https://validator.w3.org/nu/) with no errors found.
+
+CSS ran 
 
 [Full testing can be found here](assets/testing/star-trek-quiz-testing.pdf)
 

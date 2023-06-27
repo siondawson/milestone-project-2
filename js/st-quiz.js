@@ -1,7 +1,7 @@
 let score = 0;
 let questionNumber = 0;
 
-const buttonColors = ["#E95", "#97A", "#FC6", "#F90", "#C66", "#B62", "#F96", "#99F", "#B41", "#F93", "#D64", "#59F", "#C9C", "#9CF", "#CDF", "#BA5", "#FF9", "#C69", "#99C", "#C9C", "#FC6", "#A53"]
+const buttonColors = ["#E95", "#97A", "#FC6", "#F90", "#C66", "#B62", "#F96", "#99F", "#B41", "#F93", "#D64", "#59F", "#C9C", "#9CF", "#CDF", "#BA5", "#FF9", "#C69", "#99C", "#C9C", "#FC6", "#A53"];
 
 const easyQuestions = [{
     question: "What ship does Kirk command?",
@@ -228,10 +228,9 @@ function disableAnswers() {
 /** Enables click on answer buttons */
 function enableAnswers() {
     let answers = Array.from(document.querySelectorAll(".answer-btn"));
-    console.log(answers);
     answers.forEach(answer => {
         answer.style.pointerEvents = 'auto';
-    })
+    });
 }
 /** disables next button so user cant move on to next question before selecting answer */
 function disableNextBtn() {
@@ -361,7 +360,7 @@ function nextQuestion() {
     if (questionNumber < finalQuizQuestions.length) {
         
         
-        for (var answer of answers) { // removes user selection classes on answer buttons from previous question.
+        for (let answer of answers) { // removes user selection classes on answer buttons from previous question.
             answer.classList.remove(
                 "turn-green",
                 "turn-red",
