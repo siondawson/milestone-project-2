@@ -106,7 +106,7 @@ body {
     color: #000;
   }
 
-  .black-text $el.x-text .tel span a {
+  .black-text el.x-text .tel span a {
     color: #000000 !important;
 }
   
