@@ -88,9 +88,19 @@ This approach will allow for quiz questions to be modfied, changed or expanded o
 
 In any changes or new questions it must be ensured that the string 'correct' exactly matches the correct answer in the list of 'options' for the quiz to function correctly.   
 
+For correct answers the button will change color to green, for incorrect the button will turn red. Throughout the quiz the user will not know their score, only if a question is right or wrong. If a user selects an incorrect answer, the correct answer will not be shown. 
+
+After ten questions the quiz will end, the user will be given their score out of ten. There will be an option for the user to play again, where a new set of questions will be presented. There will also be an option for the user to quit to the home page. 
+
+Throughout the quiz there will be a button for the user to quit to the home page.
+
 ## Images
 
 Images we're pulled from various google searches. The starfleet badge image was taken from the above references github repository. 
+
+## Favicon
+
+Favicon.io was used to create a favicon for the site. Added to each page of the site to make browser tab easily identifiable. The starfleet insignia png from the css lcars template was perfect for this. All that was required was to import it to affinity photo, change it's color to black and export.
 
 ## Wireframes
 
