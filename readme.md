@@ -41,7 +41,7 @@ The project is a quiz based on Star Trek and is intented as a fun game for users
 
 ## Bootstrap
 
-Bootstrap 5 was used to structure the website. The sites layout is fairly simple this was put into place first. A mobile first apporach was used where the sites layour was first imagined for mobile screens and scaled up for larger screens. The required elements were few enough that the sites appearence is mainly the small on all screen sizes. 
+Bootstrap 5 was used to structure the website. The sites layout is fairly simple this was put into place first. A mobile first apporach was used where the sites layout was first imagined for mobile screens and scaled up for larger screens. The required elements were few enough that the sites appearence is mainly the small on all screen sizes. 
 
 ## Home Page
 
@@ -52,6 +52,14 @@ Only a simple home page will be required. The user will be presented with the LC
 On page load the user will see the layout of the quiz. They will need to click a button at the bottom to begin the quiz. Once clicked the user will be presented with the first question. The user will not be able to skip to the next question until an answer is selected. Once an answer is selected the selection will turn green if correct or red if incorrect. The user will not be able to change their answer once a selection has been made. 
 
 Once a selection has been made the next question button will be enabled and user will be able to move on to the next quesiton. 
+
+If the users answer is correct the button will turn green, if the users answer is not correct it will turn red. The user will not be shown the correct answer if they select an incorrect answer.
+
+Each correct answer will increment the score by 1. As the user proceeds thru the quiz they will know their score. 
+
+After answering ten questions the user will be given their score out of a maximum of ten. 
+
+The user will then be able to click 'play again' where a new set of questions will be chosen, or quit to the home page.
 
 A button allowing the user to quit the quiz to the homepage will be visible at all times. 
 
@@ -88,7 +96,11 @@ This approach will allow for quiz questions to be modfied, changed or expanded o
 
 In any changes or new questions it must be ensured that the string 'correct' exactly matches the correct answer in the list of 'options' for the quiz to function correctly.   
 
-For correct answers the button will change color to green, for incorrect the button will turn red. Throughout the quiz the user will not know their score, only if a question is right or wrong. If a user selects an incorrect answer, the correct answer will not be shown. 
+For correct answers the button will change color to green, for incorrect the button will turn red. Throughout the quiz the user will not know their score, only if a question is right or wrong. If a user selects an incorrect answer, the correct answer will not be shown. To achieve this classes will be applied based on answers the user selects.
+
+The score will be calucated in the background as user moves through the questions.
+
+When a new question is loaded the user selection classes will be removed ready for a new selection by the user. 
 
 After ten questions the quiz will end, the user will be given their score out of ten. There will be an option for the user to play again, where a new set of questions will be presented. There will also be an option for the user to quit to the home page. 
 
