@@ -10,11 +10,7 @@ body {
     width: 100%;
 }
 
-#quiz-tite {
-    font-family: 'Kanit', sans-serif;
-}
-
-#starfleet-badge {
+.starfleet-badge {
     height: 130px;
     overflow: hidden;
     width: 100px;
@@ -92,19 +88,20 @@ button {
 }
 
 .lcars-btn-orange {
-    
+
+    align-items: center;
     background: orange;
     border-radius: 50px 50px 50px 50px;
     box-shadow: none;
     color: #000;
     display: flex;
     height: 50px;
+    justify-content: center;
     margin: 0 auto;
     margin-bottom: 5px;
     width: 90px;
     
-    justify-content: center;
-    align-items: center;
+    
 
   }
 /* This code fixes issue with button text appearing blue on iphone safari. Code found online work lost after codeanwhere crashed. Now cant find the link again! */
@@ -118,14 +115,14 @@ button {
 
   .lcars-btn-red {
     
+    align-items: center;
     background: red;
     border-radius: 50px 50px 50px 50px;
     box-shadow: none;
     color: #000;
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 50px;
+    justify-content: center;
     margin: 0 auto;
     margin-bottom: 5px;
     width: 90px;
@@ -170,10 +167,6 @@ button {
 }
 
 /* QUIZ JS APPLIED FUNCTIONAL CLASSES */
-
-  .user-answer {
-
-  }
 
   .turn-green {
     background: #00ff00 !important;
