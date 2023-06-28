@@ -168,6 +168,12 @@ button {
     width: 250px;
   }
 
+  /* Footer anchor tag underline */
+
+.github-follow {
+    text-decoration: underline;
+}
+
 /* QUIZ JS APPLIED FUNCTIONAL CLASSES */
 
   .user-answer {

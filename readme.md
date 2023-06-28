@@ -96,7 +96,9 @@ Throughout the quiz there will be a button for the user to quit to the home page
 
 ## Images
 
-Images we're pulled from various google searches. The starfleet badge image was taken from the above references github repository. 
+Images we're pulled from various google searches. Inline comments in st-quiz-js have been added next to image properties of all quiz questions referencing where images were taken from. 
+
+The starfleet insignia image was taken from the above references github repository. 
 
 ## Favicon
 
@@ -130,10 +132,10 @@ Favicon.io was used to create a favicon for the site. Added to each page of the 
     + HTML was used to complete the structure of the website.
 * CSS 
     + CSS was used to style the website.
-* Bootstrap 5
-    + Bootstrap 5 was used to responsively structure the website.
 * Javascript
     + Javascript was used to display quiz questions and calculate the users score. 
+* Bootstrap 5
+    + Bootstrap 5 was used to responsively structure the website.
 * Techsini
     + Used to create apple device mockup for readme.
 + favicon.io
@@ -151,7 +153,9 @@ Extensive manual testing of Javascript functionality was carried out at all stag
 
 Website accessibility checked with [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) and showed no erros. 
 
-HTML ran through [validator](https://validator.w3.org/nu/) with no errors found.
+## Code validator testing
+
+HTML ran through [validator](https://validator.w3.org/nu/) with no errors found. [Screenshots can be found here](assets/testing/validator-testing/)
 
 CSS ran 
 
