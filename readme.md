@@ -157,7 +157,7 @@ Website accessibility checked with [WAVE Web Accessibility Evaluation Tool](http
 
 HTML ran through [validator](https://validator.w3.org/nu/) with no errors found. [Screenshots can be found here](assets/testing/validator-testing/)
 
-CSS ran 
+## Testing spreadsheet 
 
 [Full testing can be found here](assets/testing/star-trek-quiz-testing.pdf)
 
