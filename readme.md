@@ -77,7 +77,7 @@ The colors we're used from those identified in [this github repository](https://
 
 ## Typography
 
-My original plan was to use the font 'lcars.woff' font file provided in the css template. This font file in still loaded into this repository but remains unsused. Use of this font was abandoned because it simply did not look good. Letters too close together and difficult to read. New font 'Kanit' chosen via google fonts. Selected as it's look was close to what a Star Trek fan might expect. Sigular use of this font site wide was sufficient for the look of the website and applied via css to the body as a whole.
+My original plan was to use the font 'lcars.woff' font file provided in the css template. This font file in still loaded into this repository but remains unsused. Use of this font was abandoned because it simply did not look good. Letters too close together and difficult to read. New font 'Kanit' chosen via google fonts. Selected as it's look was close to what a Star Trek fan might expect of the website. Sigular use of this font site wide was sufficient for the look of the website and applied via css to the body as a whole.
 
 ## 'LCARS' Panels 
 
