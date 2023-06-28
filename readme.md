@@ -69,7 +69,7 @@ This projects visual design is farily simple. The purpose of the project is to d
 
 ## Appearence
 
-In order to present the user with an experience in keeping with the look and feel of Star Trek, I wanted the CSS to emulate the look of the computer panels in the show. In preperation for this project I discovered a CSS template to achieve this. This was modified for my own needs as is as presented in the project. 
+In order to present the user with an experience in keeping with the look and feel of Star Trek, I wanted the CSS to emulate the look of the computer panels in the show. In preperation for this project I discovered a [CSS template](https://github.com/frohoff/ctfd-trektheme) to achieve this. This was modified for my own needs as is as presented in the project. 
 
 ## Color scheme 
 
@@ -114,7 +114,7 @@ The starfleet insignia image was taken from the above references github reposito
 
 ## Favicon
 
-Favicon.io was used to create a favicon for the site. Added to each page of the site to make browser tab easily identifiable. The starfleet insignia png from the css lcars template was perfect for this. All that was required was to import it to affinity photo, change it's color to black and export.
+Favicon.io was used to create a favicon for the site. Added to each page of the site to make browser tab easily identifiable. The starfleet insignia png from the css lcars template was perfect for this. All that was required to prepare the image for use as a favicon was to import it to affinity photo, change it's color to black and export.
 
 ## Wireframes
 
