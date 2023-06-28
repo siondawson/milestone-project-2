@@ -73,7 +73,11 @@ In order to present the user with an experience in keeping with the look and fee
 
 ## Color scheme 
 
-The colors we're used from those identified in [this github repository](https://github.com/frohoff/ctfd-trektheme). Three colors were chosen for the main 'LCARS' panels, the rest were put into array that allowed their random application to the answer buttons each time a new question is loaded. Darker colors which caused contrast issues we're removed. 
+The colors we're used from those identified in [this github repository](https://github.com/frohoff/ctfd-trektheme). Three colors were chosen for the main 'LCARS' panels, the rest were put into array that allowed their random application to the answer buttons each time a new question is loaded. Darker colors which caused contrast issues we're removed from the array. 
+
+## Typography
+
+My original plan was to use the font 'lcars.woff' font file provided in the css template. This font file in still loaded into this repository but remains unsused. Use of this font was abandoned because it simply did not look good. Letters too close together and difficult to read. New font 'Kanit' chosen via google fonts. Selected as it's look was close to what a Star Trek fan might expect. Sigular use of this font site wide was sufficient for the look of the website and applied via css to the body as a whole.
 
 ## 'LCARS' Panels 
 
@@ -138,7 +142,7 @@ Favicon.io was used to create a favicon for the site. Added to each page of the 
 
 * Custom 404 error page - added on advice of my mentor. No wireframes needed for this. CSS styling allready in place.
 
-# Technologies 
+# Technologies Used 
 
 * HTML
     + HTML was used to complete the structure of the website.
@@ -152,6 +156,8 @@ Favicon.io was used to create a favicon for the site. Added to each page of the 
     + Used to create apple device mockup for readme.
 + favicon.io
     + Used to create multi device mockup for this readme.
++ google fonts
+    + One font used throughout whole project.
 
 # Testing 
 
@@ -233,6 +239,8 @@ Javascript ran through [JSHint](https://jshint.com/) with no errors found.
     + numbers replaced with 'awaiting command...'. Less confusing. More prompts for user to start the quiz. 
 6. Questions and button text showing as blue on iphone safari browsers
     + .black-text class added to css with code from cited source.
+7. The same color being applied to more than one question was identified as being confusing to users. 
+    + Math.random color selection method replaced with shuffling the array and selecting first four colors. Each color now only appears once per question. 
 
 # Deployment
 
