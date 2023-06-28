@@ -3,7 +3,6 @@ html {
     width: 100%;
 }
 
-
 body {
     background: black;
     color: white;
@@ -13,10 +12,6 @@ body {
 
 #quiz-tite {
     font-family: 'Kanit', sans-serif;
-}
-
-.instructions-container {
-    
 }
 
 #starfleet-badge {
