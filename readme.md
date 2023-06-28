@@ -167,7 +167,13 @@ Website accessibility checked with [WAVE Web Accessibility Evaluation Tool](http
 
 ## Code validator testing
 
-HTML ran through [validator](https://validator.w3.org/nu/) with no errors found. [Screenshots can be found here](assets/testing/validator-testing/)
+HTML ran through [validator](https://validator.w3.org/nu/) with no errors found.
+
+CSS ran through [validator](https://jigsaw.w3.org/css-validator/) with no errors found.
+
+Javascript ran through [JSHint](https://jshint.com/) with no errors found. 
+
+[Validator testing screenshots can be found here](assets/testing/validator-testing/)
 
 ## Testing spreadsheet 
 
